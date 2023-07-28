@@ -5,11 +5,11 @@ const Header = ( {parent, windowWidth} ) => {
 
     const [ count, setCount ] = useState(0)
 
-    const switchUnderline = () => {
+    const switchUnderline = (num) => {
         if(count === 4){
             setCount(0) // resetting count
         } else {
-            setCount((prev) => prev + 1)
+            setCount(num)
         }
 
         console.log(count)
@@ -35,11 +35,11 @@ const Header = ( {parent, windowWidth} ) => {
                     </div>
                 </div>
                 <div className="middle">
-                    <p className={count === 0 && 'underline'} onClick={switchUnderline}>home</p>
-                    <p className={count === 1 && 'underline'} onClick={switchUnderline}>video</p>
-                    <p className={count === 2 && 'underline'} onClick={switchUnderline}>market</p>
-                    <p className={count === 3 && 'underline'} onClick={switchUnderline}>friends</p>
-                    <p className={count === 4 && 'underline'} onClick={switchUnderline}>menu</p>
+                    <p className={count === 0 && 'underline'} onClick={() => switchUnderline(0)}>home</p>
+                    <p className={count === 1 && 'underline'} onClick={() => switchUnderline(1)}>video</p>
+                    <p className={count === 2 && 'underline'} onClick={() => switchUnderline(2)}>market</p>
+                    <p className={count === 3 && 'underline'} onClick={() => switchUnderline(3)}>friends</p>
+                    <p className={count === 4 && 'underline'} onClick={() => switchUnderline(4)}>menu</p>
                 </div>
 
                 <div className="right">

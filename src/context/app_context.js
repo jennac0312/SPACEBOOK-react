@@ -8,20 +8,19 @@ const AppContextProvider = (props) => {
 
     const [ windowWidth, setWindowWidth ] = useState(1000)
 
-    // window.onresize = () => {
-    //     console.log('window is resizing')
-    //     setWindowWidth(window.innerWidth)
-
-    //     console.log(windowWidth)
-    // }
-
-    window.addEventListener('resize', () => {
+    window.onresize = () => {
         console.log('window is resizing')
-        console.log(window.screen.availWidth)
-        // setWindowWidth(screen.width)
+        setWindowWidth(window.innerWidth)
+        console.log(windowWidth)
+    }
 
-        // console.log(windowWidth)
-    })
+    // window.addEventListener('resize', () => {
+    //     console.count('window is resizing')
+    //     console.log(window.screen.width)
+    //     // setWindowWidth(screen.width)
+
+    //     // console.log(windowWidth)
+    // })
 
     // ideal data structure
     const person = {
