@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-import { useFetcher } from "react-router-dom";
 
 
 export const AppContext = createContext()

@@ -7,7 +7,7 @@ import { AppContext } from '../context/app_context'
 const Tablet = () => {
   let { grabCharacters, characters } = useContext(AppContext)
 
-  let friends = grabCharacters(100)
+  let friends = grabCharacters(300)
 
   console.log(friends)
 
