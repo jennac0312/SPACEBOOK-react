@@ -10,7 +10,7 @@ const CreatePost = () => {
         {/* whats on your mind ? */}
         <div className='post'>
           <img src={mainProfile.image} alt="" className='yoda'/>
-          <input type="text" placeholder='What is on your mind?' className='bar'/>
+          <input type="text" placeholder={`What is on your mind, ${mainProfile.name}?`} className='bar'/>
         </div>
         <hr />
         {/* three icons live , photo, feelings */}
