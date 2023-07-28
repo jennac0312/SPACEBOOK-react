@@ -6,16 +6,19 @@ import { AppContext } from '../context/app_context'
 
 const Mobile = () => {
 
-    let { windowWidth } = useContext(AppContext)
-
+    // let { characters } = useContext(AppContext)
+    // console.log(...characters)
   return (
     <div className="mobile">
       <h1>MOBILE</h1>
-
+{/* 
+      {characters.map((character) => {
+        return <li>{character.name}</li>
+      })}  */}
+        <Header parent="mobile"/>
       <Routes>
-        <Route path="/home" element={ <Header parent="mobile" windowWidth={windowWidth}/> }/>
-        <Route/>
-        <Route/>
+        <Route /> 
+        <Route /> 
       </Routes>
 
     </div>
