@@ -23,7 +23,7 @@ function App() {
         <>
           <Link to='/home' className="mainLink" onClick={(e) => hide(e.target)}> SPACEBOOK </Link>
 
-          <Routes>
+          <Routes> 
             <Route path="/home" element={<Mobile />}/>
           </Routes>
         </>

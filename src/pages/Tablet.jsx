@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Header from '../components/Header'
 import Stories from '../components/Stories'
 import { AppContext } from '../context/app_context'
+import CreatePost from '../components/CreatePost'
 
 const Tablet = () => {
   let { grabCharacters, characters, mainProfile } = useContext(AppContext)
@@ -20,6 +21,7 @@ const Tablet = () => {
         }) }
         <Header parent="tablet"/>
         <Stories />
+        <CreatePost />
     </div>
   )
 }

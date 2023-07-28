@@ -196,6 +196,53 @@
   height: 20px;
   width: 20px;
 }
+/* POSTS ------------ */
+
+.container{
+  /* border: solid red; */
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.post{
+  /* border: solid red; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.yoda{
+  width: 52px;
+  border-radius: 50%;
+}
+.bar{
+  width: 100%;
+  background-color: rgb(210, 205, 205);
+  border-radius: 22px;
+  height: 32px;
+}
+.icons{
+  /* border: solid blue; */
+  display: flex;
+  justify-content: space-around;
+  
+}
+.images{
+  width: 32px;
+}
+.red{
+  display: flex;
+  align-items: center;
+}
+.green{
+  display: flex;
+  align-items: center;
+}
+.yellow{
+  display: flex;
+  align-items: center;
+}
 }
 
 /* DESKTOP------------------------------------------------------ */
@@ -339,5 +386,52 @@
 .iconContainer * {
   height: 20px;
   width: 20px;
+}
+/* POSTS ------------------- */
+
+.container{
+  /* border: solid red; */
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.post{
+  /* border: solid red; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.yoda{
+  width: 52px;
+  border-radius: 50%;
+}
+.bar{
+  width: 100%;
+  background-color: rgb(210, 205, 205);
+  border-radius: 22px;
+  height: 32px;
+}
+.icons{
+  /* border: solid blue; */
+  display: flex;
+  justify-content: space-around;
+  
+}
+.images{
+  width: 32px;
+}
+.red{
+  display: flex;
+  align-items: center;
+}
+.green{
+  display: flex;
+  align-items: center;
+}
+.yellow{
+  display: flex;
+  align-items: center;
 }
 }

@@ -5,7 +5,7 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
 
-    const [ windowWidth, setWindowWidth ] = useState(1000)
+    const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
 
     window.onresize = () => {
         console.log('window is resizing')
