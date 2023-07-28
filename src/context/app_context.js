@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
-
 export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
@@ -36,6 +35,7 @@ const AppContextProvider = (props) => {
     
     // JENNA API-----------------------------------
     const [ characters, setCharacters ] = useState([])
+    const [ mainProfile, setMainProfile ] = useState({})
     const [ limitCharacters, setLimitCharacters ] = useState([])
 
     const array = []
@@ -70,6 +70,7 @@ const AppContextProvider = (props) => {
     
     useEffect(() => {
         console.log(`CHARACTERS ARRAY`, characters)
+        setMainProfile(characters[0])
     }, [array])
     
     
@@ -108,7 +109,7 @@ const AppContextProvider = (props) => {
     return(
         <AppContext.Provider value={{
             windowWidth,
-            characters, grabCharacters
+            characters, grabCharacters, mainProfile
         }}>
             {props.children}
         </AppContext.Provider>

@@ -5,11 +5,12 @@ import Stories from '../components/Stories'
 import { AppContext } from '../context/app_context'
 
 const Tablet = () => {
-  let { grabCharacters, characters } = useContext(AppContext)
+  let { grabCharacters, characters, mainProfile } = useContext(AppContext)
 
-  let friends = grabCharacters(300)
+  let friends = grabCharacters(10)
 
   console.log(friends)
+  console.log(mainProfile)
 
   return (
     <div className="tablet">
