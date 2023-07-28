@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+import { useFetcher } from "react-router-dom";
 
 
 export const AppContext = createContext()
@@ -36,27 +37,54 @@ const AppContextProvider = (props) => {
     
     // JENNA API-----------------------------------
     const [ characters, setCharacters ] = useState([])
+    const [ limitCharacters, setLimitCharacters ] = useState([])
+
+    const array = []
 
     const fetchRick = async (URL) => {
         const response = await axios.get(URL)
         // console.log(response)
-        const data = response.data
+        const data = response.data.results
         // console.log(data)
         URL = response.data.info.next
         // console.log(URL)
 
-        // console.log([...characters], data)
-
+        array.push(...data)
         if(URL){
             URL = response.data.info.next
             // console.log("url exists")
-            // console.log(characters)
             fetchRick(URL)
         }
+        // console.log(array)
     }
+    
+    
+    useEffect(() => {
+        setCharacters(array)
+        
+        return () => {
+            fetchRick('https://rickandmortyapi.com/api/character?page=1')
+            console.log('unmount')
+            console.log(array)
+        }
+    }, [])
+    
+    useEffect(() => {
+        console.log(`CHARACTERS ARRAY`, characters)
+    }, [array])
+    
+    
+    const grabCharacters = (howMany) => {
 
-    fetchRick('https://rickandmortyapi.com/api/character?page=38')
-
+        let array = []
+        for(let i = 0; i < howMany; i++){
+            // setLimitCharacters(characters[i])
+            array.push( characters[i] )
+        }
+        // console.log(limitCharacters)
+        return array
+    }
+    
 
 
     // --------------------------------------------
@@ -80,7 +108,8 @@ const AppContextProvider = (props) => {
 
     return(
         <AppContext.Provider value={{
-            windowWidth
+            windowWidth,
+            characters, grabCharacters
         }}>
             {props.children}
         </AppContext.Provider>
