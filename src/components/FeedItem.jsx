@@ -1,15 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../context/app_context'
 
 const FeedItem = ( {friend, index} ) => {
 
-    let { mainProfile } = useContext(AppContext)
+    let { mainProfile, getRandomIntInclusive, time } = useContext(AppContext)
 
+    const [ likes, setLikes ] = useState(0)
+    
     const hide = (what) => {
-        // console.log(what)
         what.classList.add('hide')
     }
 
+    const focusOn = (who) => {
+        who.focus() // sets focus to comment clicked
+    }
 
   return (
     <div className={`friendPost post${index}`}>
@@ -18,7 +22,8 @@ const FeedItem = ( {friend, index} ) => {
             <img src={friend.image} alt="" srcset="" />
             <div className="">
                 <h4>{friend.name}</h4>
-                <p className='globe'>7h 🌍</p>
+                <p className='globe'>{getRandomIntInclusive(1,23)}h 🌍</p>
+                {/* updates everytime state is altered ... */}
             </div>
         </div>
 
@@ -39,15 +44,17 @@ const FeedItem = ( {friend, index} ) => {
       </div>
 
       <div className="reactions">
+        {likes && 
         <div className="top">
-            <p>😂2</p>
+            <p>😂{likes && likes}</p>
             <p>2💬</p>
         </div>
+        }
         <hr />
 
         <div className="options">
-            <p>👍 Like</p>
-            <p>💬 Comment</p>
+            <p onClick={() => setLikes(likes + 1)}>👍 Like</p>
+            <p onClick={() => focusOn(document.querySelector(`.input${index}`))}>💬 Comment</p>
             <p>➦ Share</p>
         </div>
 
@@ -67,7 +74,7 @@ const FeedItem = ( {friend, index} ) => {
 
         <div className="addComment">
             <img src={mainProfile.image} alt="" srcset="" />
-            <input type="text" placeholder='Write a comment...'/>
+            <input type="text" placeholder='Write a comment...' className={`input${index}`}/>
         </div>
 
       </div>

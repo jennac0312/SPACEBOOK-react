@@ -89,7 +89,15 @@ const AppContextProvider = (props) => {
     // GENERAL STATE------------------------------------------------------
     const [ showSearch, setShowSearch ] = useState(false) // search bar pop up
     const [ search, setSearch ] = useState(null) // for search bar names
-    
+    const [ time, setTime ] = useState(getRandomIntInclusive(1, 23))
+
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
+      } // from mdn
+
+
     // ---------------------------------------------
 
 
@@ -112,7 +120,7 @@ const AppContextProvider = (props) => {
     return(
         <AppContext.Provider value={{
             windowWidth,
-            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch
+            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time
         }}>
             {props.children}
         </AppContext.Provider>
