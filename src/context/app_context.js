@@ -84,10 +84,13 @@ const AppContextProvider = (props) => {
         // console.log(limitCharacters)
         return array
     }
-    
-
-
     // --------------------------------------------
+
+    // GENERAL STATE------------------------------------------------------
+    const [ showSearch, setShowSearch ] = useState(false) // search bar pop up
+    const [ search, setSearch ] = useState(null) // for search bar names
+    
+    // ---------------------------------------------
 
 
     // DOUGS API------------------------------------
@@ -109,7 +112,7 @@ const AppContextProvider = (props) => {
     return(
         <AppContext.Provider value={{
             windowWidth,
-            characters, grabCharacters, mainProfile
+            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch
         }}>
             {props.children}
         </AppContext.Provider>

@@ -29,8 +29,7 @@ const Stories = () => {
             return (
               <div className="story">
                 <img src={friend.image} alt='profile pic' className='avatar'/>
-                <h3>temp pic</h3>
-                <p>{index+1}</p>
+                <p className='name'>{friend.name}</p>
               </div>
             )
           }) }
