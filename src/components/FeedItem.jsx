@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { AppContext } from '../context/app_context'
+import { Link } from 'react-router-dom'
 
 const FeedItem = ( {friend, index} ) => {
 
-    let { mainProfile, getRandomIntInclusive, time } = useContext(AppContext)
+    let { mainProfile, getRandomIntInclusive, time, setClickedProfile } = useContext(AppContext)
 
     const [ likes, setLikes ] = useState(0)
     
@@ -18,14 +19,16 @@ const FeedItem = ( {friend, index} ) => {
   return (
     <div className={`friendPost post${index}`}>
       <div className="top">
-        <div className="left">
-            <img src={friend.image} alt="" srcset="" />
+      <Link to={`/profile/${friend.name.replaceAll(' ','')}`}>
+        <div className="left" onClick={() => setClickedProfile(friend)}>
+            <img src={friend?.image} alt="" srcset="" />
             <div className="">
-                <h4>{friend.name}</h4>
+                <h4>{friend?.name}</h4>
                 <p className='globe'>{getRandomIntInclusive(1,23)}h 🌍</p>
                 {/* updates everytime state is altered ... */}
             </div>
         </div>
+      </Link>
 
         <div className="right">
             <div className="">
@@ -46,7 +49,7 @@ const FeedItem = ( {friend, index} ) => {
       <div className="reactions">
         {likes && 
         <div className="top">
-            <p>😂{likes && likes}</p>
+            <p>👍{likes && likes}</p>
             <p>2💬</p>
         </div>
         }
@@ -64,16 +67,16 @@ const FeedItem = ( {friend, index} ) => {
             <p className='viewMore'>View more comments</p>
 
             <div className="commentContainer">
-                <img src={friend.image} alt="" srcset="" />
+                <img src={friend?.image} alt="" srcset="" />
                 <div className="comment">
-                    <p className="name">{friend.name}</p>
+                    <p className="name">{friend?.name}</p>
                     <p className="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
         </div>
 
         <div className="addComment">
-            <img src={mainProfile.image} alt="" srcset="" />
+            <img src={mainProfile?.image} alt="" srcset="" />
             <input type="text" placeholder='Write a comment...' className={`input${index}`}/>
         </div>
 

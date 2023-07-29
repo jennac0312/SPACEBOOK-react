@@ -18,8 +18,8 @@ const Stories = () => {
     <div className='storiesContainer'>
 
         <div className="options">
-          <div className={underline && 'underline'} onClick={toggleLine}>Stories</div>
-          <div className={!underline && 'underline'} onClick={toggleLine}>Reels</div>
+          <div className={underline && 'underline'} onClick={() => setUnderline(true)}>Stories</div>
+          <div className={!underline && 'underline'} onClick={() => setUnderline(false)}>Reels</div>
         </div>
 
         <hr/>

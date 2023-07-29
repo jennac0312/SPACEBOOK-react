@@ -174,7 +174,7 @@
   
   .container{
     /* border: solid red; */
-    width: 600px;
+    width: 620px;
     margin: auto;
     background-color: white;
     padding: 20px;
@@ -288,4 +288,12 @@
   .searchItem .right p{
     opacity: .8;
     font-size: .8em;
+  }
+
+
+
+  /* PROFILE ----------------- */
+  .tabletProfileContainer{
+    background-color: yellow;
+    margin-top: 62px;
   }

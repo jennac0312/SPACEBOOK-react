@@ -20,6 +20,12 @@
   font-family: 'fantasy';
 }
 
+/* to undo default Link style */
+a{
+  text-decoration: none;
+  color: black;
+}
+
 /* header stays when scrolling */
 .header {
   position: fixed;
@@ -67,7 +73,7 @@
 
 /* --------- FEED --------------------- TABLET */
 .feedContainer{
-  border: 3px solid red;
+  /* border: 3px solid red; */
   /* background-color: white; */
   border-radius: 10px;
   width: 650px;

@@ -8,9 +8,9 @@ const AppContextProvider = (props) => {
     const [ windowWidth, setWindowWidth ] = useState(window.innerWidth)
 
     window.onresize = () => {
-        console.log('window is resizing')
+        // console.log('window is resizing')
         setWindowWidth(window.innerWidth)
-        console.log(windowWidth)
+        // console.log(windowWidth)
     }
 
     // window.addEventListener('resize', () => {
@@ -37,6 +37,7 @@ const AppContextProvider = (props) => {
     const [ characters, setCharacters ] = useState([])
     const [ mainProfile, setMainProfile ] = useState({})
     const [ limitCharacters, setLimitCharacters ] = useState([])
+    const [ pageMount, setPageMount ] = useState(false)
 
     const array = []
 
@@ -66,23 +67,23 @@ const AppContextProvider = (props) => {
             console.log('unmount')
             console.log(array)
         }
-    }, [])
+    }, [pageMount])
     
     useEffect(() => {
-        console.log(`CHARACTERS ARRAY`, characters)
+        // console.log(`CHARACTERS ARRAY`, characters)
         setMainProfile(characters[0])
     }, [array])
     
     
     const grabCharacters = (howMany) => {
 
-        let array = []
+        let charactersArray = []
         for(let i = 0; i < howMany; i++){
             // setLimitCharacters(characters[i])
-            array.push( characters[i] )
+            charactersArray.push( characters[i] )
         }
         // console.log(limitCharacters)
-        return array
+        return charactersArray
     }
     // --------------------------------------------
 
@@ -97,6 +98,9 @@ const AppContextProvider = (props) => {
         return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
       } // from mdn
 
+
+    //   tracking clicked profile from search bar
+      const [ clickedProfile, setClickedProfile ] = useState({})
 
     // ---------------------------------------------
 
@@ -119,8 +123,8 @@ const AppContextProvider = (props) => {
 
     return(
         <AppContext.Provider value={{
-            windowWidth,
-            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time
+            windowWidth, setPageMount, setCharacters, fetchRick,
+            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile
         }}>
             {props.children}
         </AppContext.Provider>
