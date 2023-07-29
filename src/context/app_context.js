@@ -104,8 +104,19 @@ const AppContextProvider = (props) => {
 
     // ---------------------------------------------
 
-
-    // DOUGS API------------------------------------
+    // DOUGS API------------------------------------     
+        const [galacticHome, setGalacticHome] = useState("")
+        
+        const getGalacticHome = async () => {
+        const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=VMV9vIgFB7Mfpe28RjcFSDyawICxwznNYKIYYQCS&count=9
+        `)
+        console.log(response); 
+        setGalacticHome(response.data)
+        }
+        useEffect(()=>{
+            getGalacticHome()
+        },[])
+        // getGalacticHome();
     // --------------------------------------------
 
     // ANN API------------------------------------
@@ -124,7 +135,13 @@ const AppContextProvider = (props) => {
     return(
         <AppContext.Provider value={{
             windowWidth, setPageMount, setCharacters, fetchRick,
-            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile
+            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile,
+
+            // doug
+            galacticHome, setGalacticHome, getGalacticHome,
+
+            // ann
+
         }}>
             {props.children}
         </AppContext.Provider>
