@@ -16,6 +16,7 @@ function App() {
   // setPageMount(true)
   // console.log(window.innerWidth)
   // console.log('CLICKED PROFILE', clickedProfile)
+  console.log('width',windowWidth)
 
   // issue with not having characters ready on render... attempt fix failed
 //   useEffect(() => {
@@ -34,7 +35,7 @@ function App() {
   }
 
   // mobile
-    if(windowWidth <= 400){
+    if(windowWidth <= 500){
       return (
         <>
           <Routes> 
@@ -48,7 +49,7 @@ function App() {
     }
     
     // tablet
-    if(windowWidth > 390 && windowWidth <= 1200 ){
+    if(windowWidth > 500 && windowWidth <= 1200 ){
       return (
         <>
           <Routes>

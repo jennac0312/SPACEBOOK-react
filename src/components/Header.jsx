@@ -17,8 +17,24 @@ const Header = ( { parent, windowWidth } ) => {
     const mobile = () => {
         return (
           <div className='header'>
-            <h1>I AM THE HEADER for mobile</h1>
-            <h1>{windowWidth}</h1>
+            <div className="left">
+                <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="" className="menu" />
+                <img src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo-700x394.png" alt="" className="logo" />
+            </div>
+            
+            <div className="right">
+
+                <div className="">
+                    <img src='https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Vector-PNG-Cutout.png' alt='plus' className='' />
+                </div>
+                <div className="">
+                    <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>
+                </div>
+                <div className="">
+                    <img src='https://www.freeiconspng.com/uploads/black-facebook-messenger-logo-29.png' alt='message' className=''/>
+                </div>
+
+            </div>
           </div>
         )
     } 

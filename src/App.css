@@ -59,7 +59,7 @@ button:hover{
 /* screen sizes */
 .mobile{
   max-height: 844px;
-  max-width: 390px;
+  max-width: 500px;
 }
 
 .tablet{

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react'
+import '../styles/Mobile.css'
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
 import Header from '../components/Header'
 import { AppContext } from '../context/app_context'
+import CreatePost from '../components/CreatePost'
 
 const Mobile = () => {
 
@@ -10,12 +12,14 @@ const Mobile = () => {
     // console.log(...characters)
   return (
     <div className="mobile">
-      <h1>MOBILE</h1>
-{/* 
+      {/* 
       {characters.map((character) => {
         return <li>{character.name}</li>
       })}  */}
+      <div className="topHalf">
         <Header parent="mobile"/>
+        <CreatePost parent="mobile"/>
+      </div>
       <Routes>
         <Route /> 
         <Route /> 
