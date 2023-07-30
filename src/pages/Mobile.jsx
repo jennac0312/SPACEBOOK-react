@@ -7,10 +7,12 @@ import { AppContext } from '../context/app_context'
 import CreatePost from '../components/CreatePost'
 import Stories from '../components/Stories'
 import Feed from '../components/Feed'
+import Search from '../components/Search'
 
 const Mobile = () => {
 
-    // let { characters } = useContext(AppContext)
+
+    let { characters, showSearch } = useContext(AppContext)
     // console.log(...characters)
   return (
     <div className="mobile">
@@ -20,6 +22,7 @@ const Mobile = () => {
       })}  */}
       <div className="topHalf">
         <Header parent="mobile"/>
+        { showSearch && <Search />}
         <CreatePost parent="mobile"/>
       </div>
       <Stories parent="mobile"/>
