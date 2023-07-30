@@ -26,8 +26,8 @@ const PhotoList = () => {
       <div className="pics">
         { arr.map((pic) => {
           return (
-            <div className="container">
-              <img src={pic.url}/>
+            <div className="container" style={{ backgroundImage:`url(${pic.url})` }}>
+              {/* <img src={pic.url}/> */}
             </div>
           )
         }) }

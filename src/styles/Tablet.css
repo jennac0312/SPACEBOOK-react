@@ -812,6 +812,7 @@
   .photoList .top {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
   }
   .photoList .all{
     color: blue;
@@ -827,15 +828,16 @@
     border: 1px solid purple;
     height: 100px;
     width: 100px;
+    background-size: cover;
+    margin-bottom: 5px;
   }
-
-  .photoList img{
-    height: 100px !important;
-    width: 100px;
-    border-radius: 10px;
+  .all{
+    padding: 3px 5px;
+    border-radius: 5px;
   }
-
-  
+  .all:hover{
+    background-color: #d6d7da;
+  }
   /* FRIENDS LIST */
   .friendsList{
     border: 2px solid purple;
