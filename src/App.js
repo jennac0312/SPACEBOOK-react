@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-import './App.css';
+// import './App.css';
 import Desktop from './pages/Desktop';
 import Mobile from './pages/Mobile';
 import Tablet from './pages/Tablet';
@@ -15,7 +15,7 @@ function App() {
 
   // setPageMount(true)
   // console.log(window.innerWidth)
-  console.log('CLICKED PROFILE', clickedProfile)
+  // console.log('CLICKED PROFILE', clickedProfile)
 
   // issue with not having characters ready on render... attempt fix failed
 //   useEffect(() => {

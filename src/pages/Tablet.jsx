@@ -8,15 +8,17 @@ import CreatePost from '../components/CreatePost'
 import Search from '../components/Search'
 import Feed from '../components/Feed'
 import Profile from './Profile'
+import Contacts from '../components/Contacts'
+import Nav from '../components/Nav'
 
 const Tablet = () => {
   let { grabCharacters, characters, mainProfile, showSearch, clickedProfile } = useContext(AppContext)
 
   let friends = grabCharacters(10)
 
-  console.log(friends)
-  console.log(mainProfile)
-  console.log('SHOW SEARCH',showSearch)
+  // console.log(friends)
+  // console.log(mainProfile)
+  // console.log('SHOW SEARCH',showSearch)
 
   return (
     <div className="tablet">
@@ -24,11 +26,25 @@ const Tablet = () => {
         {/* <Route path={`/profile/${clickedProfile.name?.replaceAll(' ', '')}`} element={<Profile profile={clickedProfile} parent="tablet"/>}/> */}
       </Routes>
         {/* <h1>TABLET</h1> */}
-        <Header parent="tablet"/>
-        { showSearch && <Search />}
-        <Stories />
-        <CreatePost />
-        <Feed />
+        <div className="top">
+          <Header parent="tablet"/>
+          { showSearch && <Search />}
+        </div>
+
+        <div className="mainContent">
+          <div className="left">
+              {/* <Nav /> */}
+              {/* rendering nav is optional */}
+          </div>
+          <div className="center">
+            <Stories />
+            <CreatePost />
+            <Feed />
+          </div>
+          <div className="right">
+            <Contacts />
+          </div>
+        </div>
     </div>
   )
 }

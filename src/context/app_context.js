@@ -85,6 +85,16 @@ const AppContextProvider = (props) => {
         // console.log(limitCharacters)
         return charactersArray
     }
+    const grabRandomCharacters = (howMany) => {
+
+        let charactersArray = []
+        for(let i = 0; i < howMany; i++){
+            // setLimitCharacters(characters[i])
+            charactersArray.push( characters[getRandomIntInclusive(0,characters.length-1)] )
+        }
+        // console.log(limitCharacters)
+        return charactersArray
+    }
     // --------------------------------------------
 
     // GENERAL STATE------------------------------------------------------
@@ -108,9 +118,9 @@ const AppContextProvider = (props) => {
         const [galacticHome, setGalacticHome] = useState("")
         
         const getGalacticHome = async () => {
-        const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=VMV9vIgFB7Mfpe28RjcFSDyawICxwznNYKIYYQCS&count=9
+        const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=VMV9vIgFB7Mfpe28RjcFSDyawICxwznNYKIYYQCS&count=20
         `)
-        console.log(response); 
+        console.log('GALACTIC RESPONSE',response); 
         setGalacticHome(response.data)
         }
         useEffect(()=>{
@@ -135,7 +145,7 @@ const AppContextProvider = (props) => {
     return(
         <AppContext.Provider value={{
             windowWidth, setPageMount, setCharacters, fetchRick,
-            characters, grabCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile,
+            characters, grabCharacters, grabRandomCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile,
 
             // doug
             galacticHome, setGalacticHome, getGalacticHome,

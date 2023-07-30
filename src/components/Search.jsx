@@ -8,16 +8,16 @@ const Search = () => {
 
     const [ clicked, setClicked ] = useState(false)
 
-    useEffect(() => {
-        console.log(clicked)
-        console.log(search)
-    }, [clicked])
+    // useEffect(() => {
+    //     console.log(clicked)
+    //     console.log(search)
+    // }, [clicked])
 
-    useEffect(() => {
-        characters.filter((character) => {
-            character.name.includes(search) && console.log(character.name)
-        })
-    }, [search])
+    // useEffect(() => {
+    //     characters.filter((character) => {
+    //         character.name.includes(search) && console.log(character.name)
+    //     })
+    // }, [search])
 
     const handleClick = (who) => {
         setShowSearch(false)
@@ -38,9 +38,9 @@ const Search = () => {
 
         <div className="results">
             { !search ? 
-            <p className=''>No Recent Searches</p> :
+            <p className='recent'>No Recent Searches</p> :
             characters.map((character) => {
-                console.log(character.name)
+                // console.log(character.name)
                 if(character.name.toLowerCase().includes(search.toLowerCase())) return (
                     <Link to={`/profile/${character.name.replaceAll(' ', '')}`}>
                         <div className="searchItem" onClick={() => handleClick(character)}>

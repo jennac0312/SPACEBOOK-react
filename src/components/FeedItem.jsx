@@ -19,12 +19,12 @@ const FeedItem = ( {friend, index} ) => {
   return (
     <div className={`friendPost post${index}`}>
       <div className="top">
-      <Link to={`/profile/${friend.name.replaceAll(' ','')}`}>
+      <Link to={`/profile/${friend?.name.replaceAll(' ','')}`}>
         <div className="left" onClick={() => setClickedProfile(friend)}>
             <img src={friend?.image} alt="" srcset="" />
             <div className="">
                 <h4>{friend?.name}</h4>
-                <p className='globe'>{getRandomIntInclusive(1,23)}h 🌍</p>
+                <p className='globe'>{time}h 🌍</p>
                 {/* updates everytime state is altered ... */}
             </div>
         </div>

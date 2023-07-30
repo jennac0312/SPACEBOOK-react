@@ -64,7 +64,7 @@ const Header = ( { parent, windowWidth } ) => {
                     <Link to="/home">
                         <img src='https://cdn.pixabay.com/photo/2020/10/17/13/19/facebook-5662065_1280.png' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
                     </Link>
-                    <div className="searchContainer" onClick={() => setShowSearch(!showSearch)}>
+                    <div className="searchContainer" onClick={() => setShowSearch(true)}>
                         <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>
 
                     </div>

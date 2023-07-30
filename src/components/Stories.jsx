@@ -3,7 +3,7 @@ import { AppContext } from '../context/app_context'
 
 const Stories = () => {
 
-  let { mainProfile, grabCharacters, characters } = useContext(AppContext)
+  let { mainProfile, grabCharacters, characters, galacticHome  } = useContext(AppContext)
 
   const [ underline, setUnderline ] = useState(true)
   const tempArray = [1,2,3,4,5,6,7,8,9,10]
@@ -25,9 +25,9 @@ const Stories = () => {
         <hr/>
 
         <div className="stories">
-          { characters.map((friend, index) => {
+          { friends.map((friend, index) => {
             return (
-              <div className="story">
+              <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}}>
                 <img src={friend.image} alt='profile pic' className='avatar'/>
                 <p className='name'>{friend.name}</p>
               </div>

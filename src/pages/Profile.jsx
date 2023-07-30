@@ -2,11 +2,19 @@ import React, { useContext } from 'react'
 import Header from '../components/Header'
 import { AppContext } from '../context/app_context'
 import Search from '../components/Search'
+import Banner from '../components/Banner'
+import ProfileHead from '../components/ProfileHead'
+import Intro from '../components/Intro'
+import PhotoList from '../components/PhotoList'
+import FriendsList from '../components/FriendsList'
+import CreatePost from '../components/CreatePost'
+import Feed from '../components/Feed'
 
 const Profile = ( { parent, profile} ) => {
 
     console.log('PROFILE PARENT:', parent)
-let { showSearch } = useContext(AppContext)
+    let { showSearch } = useContext(AppContext)
+
     const mobile = () => {
         return (
             
@@ -22,12 +30,25 @@ let { showSearch } = useContext(AppContext)
         return (
             <>
             <Header parent="tablet"/>
-            {showSearch && <Search />}
+            { showSearch && <Search />}
             <div className='tabletProfileContainer'>
-                <h1>{parent}</h1>
+                {/* <h1>{parent}</h1>
                 <h1>TABLET PROFILE</h1>
                 <p>{profile.name} profile</p>
-                <img src={profile.image}/>
+                <img src={profile.image}/> */}
+                <Banner />
+                <ProfileHead />
+                <div className="mainBody">
+                    <div className="left">
+                        <Intro />
+                        <PhotoList />
+                        <FriendsList />
+                    </div>
+                    <div className="rightSide">
+                        <CreatePost />
+                        <Feed />
+                    </div>
+                </div>
             </div>
             </>
         )
@@ -35,20 +56,34 @@ let { showSearch } = useContext(AppContext)
     const desktop = () => {
         return (
             <>
-            <Header parent="desktop"/>
-            <div className='desktopProfileContainer'>
-                <h1>{parent}</h1>
-                <h1>DESKTOP PROFILE</h1>
-                <p>{profile.name} profile</p>
-                <img src={profile.image}/>
-            </div>
+                <Header parent="desktop"/>
+                <div className='desktopProfileContainer'>
+                { showSearch && <Search />}
+                {/* <h1>{parent}</h1> */}
+                {/* <h1>DESKTOP PROFILE</h1> */}
+                {/* <p>{profile.name} profile</p>
+                <img src={profile.image}/> */}
+                <Banner />
+                <ProfileHead />
+                <div className="mainBody">
+                    <div className="left">
+                        <Intro />
+                        <PhotoList />
+                        <FriendsList />
+                    </div>
+                    <div className="rightSide">
+                        <CreatePost />
+                        <Feed />
+                    </div>
+                </div>
+                </div>
             </>
         )
     }
   
     if( parent === "mobile" ) return mobile()
     if( parent === "tablet" ) return tablet()
-    if( !parent ) return desktop() // dont know where parent is being passed
+    if( !parent ) return desktop() // dont know why parent is undefined...
 }
 
 export default Profile

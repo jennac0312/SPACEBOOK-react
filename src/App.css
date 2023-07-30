@@ -1,4 +1,7 @@
 /* GENERAL ------------------------------------ */
+#root{
+  /* background-color:#f0f2f5 !important; */
+}
 *{
   margin: 0;
   padding: 0;
@@ -31,6 +34,8 @@ a{
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 10; 
+  /* to counteract contacts zindex */
 }
 
 .hide {
@@ -47,16 +52,11 @@ a{
   display: none;
 }
 
-.storiesContainer{
-  /* background-color: red !important; */
-  margin-top: 85px !important;
-  border: none !important;
-  height: 270px !important;
-  width: 650px !important;
+button:hover{
+  cursor: pointer;
 }
 
 /* screen sizes */
-
 .mobile{
   max-height: 844px;
   max-width: 390px;
@@ -67,173 +67,19 @@ a{
 }
 
 .desktop{
-  max-width: 1200px;
+  min-width: 1200px;
+}
+
+/* END GENERAL ---------------------------------------------- */
+
+
+
+.storiesContainer{
+  /* background-color: red !important; */
+  /* margin-top: 85px !important; */
+  border: none !important;
+  height: 270px !important;
+  width: 650px !important;
 }
 
 
-/* --------- FEED --------------------- TABLET */
-.feedContainer{
-  /* border: 3px solid red; */
-  /* background-color: white; */
-  border-radius: 10px;
-  width: 650px;
-  margin: auto;
-  margin-top: 20px;
-}
-
-.friendPost{
-  /* border: 2px solid blue; */
-  border-radius: 10px;
-  margin-bottom: 15px;
-  background-color: white;
-  /* height: 200px; */
-  padding: 10px 15px;
-}
-
-.friendPost .top{
-  border: 1px solid rgb(75, 77, 233);
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
-}
-.friendPost .left{
-  border: 1px solid hotpink;
-  display: flex;
-  align-items: center;
-}
-.friendPost .left div{
-  border: 1px solid lime;
-  margin-left: 10px;
-}
-
-.friendPost .top img {
-  height: 50px;
-  border-radius: 50%;
-}
-
-.friendPost .right{
-  border: 1px solid red;
-  display: flex;
-  align-items: center;
-  opacity: .8;
-}
-
-.friendPost .right div {
-  border: 1px solid green;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 8px;
-}
-
-.friendPost .right div:hover {
-  background-color: #c5c4c48a;
-  cursor: pointer;
-}
-.friendPost .right img{
-  height: 20px;
-}
-
-.friendPost .exit{
-  font-weight: bold;
-}
-
-.reactions .top{
-  display: flex;
-}
-.reactions .top *:hover{
-  cursor: pointer;
-}
-
-.reactions .options{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 35px;
-  margin: 6px 0 8px 0;
-}
-
-.reactions .options * {
-  /* border: 1px solid blue; */
-  width: 32%;
-  text-align: center;
-  font-size: 1.2em;
-  padding: 8px 0;
-}
-.reactions .options *:hover {
-  cursor: pointer;
-  background-color: #c5c4c48a;
-  border-radius: 10px;
-}
-
-.comments {
-  border: 1px solid lime;
-  margin-top: 5px;
-}
-
-.comments .viewMore {
-  font-weight: bold;
-  opacity: .6;
-}
-.comments .viewMore:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* INDIVIDUAL COMMENT ---------------------- */
-.comments .commentContainer {
-  border: 1px solid purple;
-  margin-top: 10px;
-  display: flex;
-}
-
-.commentContainer img, .addComment img {
-  height: 35px;
-  border-radius: 50%;
-}
-
-.comment{
-  /* border: 1px solid red; */
-  border-radius: 10px;
-  background-color: #c5c4c45e;
-  margin-left: 5px;
-  padding: 5px;
-  width: fit-content;
-}
-
-.comment .name {
-  font-weight: 500;
-  font-size: .8em;
-}
-
-.addComment{
-  border: 1px solid orange;
-  margin-top: 10px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-}
-
-.addComment input {
-  height: 40px;
-  width: 95%;
-  border-radius: 20px;
-  border: none;
-  background-color: #f0f2f5;
-  font-size: .9em;
-  outline: none;
-  padding-left: 10px;
-  margin-left: 5px
-}
-
-.addComment input::placeholder{
-  padding-left: 10px;
-  color: rgba(0, 0, 0, 0.76);
-}
-
-.textArea{
-  font-family: 'wingdings';
-}
