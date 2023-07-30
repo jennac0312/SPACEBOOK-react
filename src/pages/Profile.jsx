@@ -24,7 +24,7 @@ const Profile = ( { parent, profile} ) => {
                 <Banner />
                 <ProfileHead parent="mobile"/>
                 <hr />
-                <FriendsList />
+                <FriendsList parent="mobile"/>
                 <CreatePost parent="mobile"/>
                 {/* <img src={profile.image}/> */}
                 {/* <div className="profileBody">

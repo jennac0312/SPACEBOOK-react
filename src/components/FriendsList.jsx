@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../context/app_context'
 
-const FriendsList = () => {
+const FriendsList = ( {parent} ) => {
 
   let { grabRandomCharacters } = useContext(AppContext) 
 

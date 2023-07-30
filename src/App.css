@@ -81,7 +81,6 @@ button:hover{
 /* END GENERAL ---------------------------------------------- */
 
 
-
 .storiesContainer{
   /* background-color: red !important; */
   /* margin-top: 85px !important; */
@@ -90,4 +89,81 @@ button:hover{
   width: 650px !important;
 }
 
+.storiesContainer * *:hover{
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.363);
+}
+.storiesContainer .options *:hover{
+  cursor: pointer;
+  border-radius: 10px !important;
+  background-color: rgba(128, 128, 128, 0.363);
+  border-radius: 10px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.storiesContainer{
+  border: 2px solid grey;
+  border-radius: 10px;
+  width: 550px;
+  /* margin: 20px auto; */
+  /* padding: 10px; */
+  background-color: white;
+  height: 260px;
+}
 
+.storiesContainer .options{
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 10px 10px;
+  
+}
+
+.storiesContainer .options *{
+  width: 50%;
+  padding-bottom: 5px;
+  margin-bottom: -10px;
+}
+.stories{
+  height: 250px;
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.story{
+  border: 1px solid lime;
+  border-radius: 10px;
+  background-color: #006eff48;
+  flex-shrink: 0;
+  height: 190px;
+  width: 120px;
+  margin: 10px 7px;
+}
+
+.story .name {
+  /* border: 1px solid purple; */
+  width: 110px;
+  height: 25px;
+  color: white;
+  font-weight: 500;
+  font-size: .9em;
+  text-align: left;
+  margin-top: 110px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.story .name:hover{
+  background-color: transparent;
+}
+
+.tablet .story .avatar {
+  height: 30px;
+  border-radius: 50%;
+  border: 4px solid #1876f2;
+  margin-left: 10px;
+  margin-top: 10px;
+}
