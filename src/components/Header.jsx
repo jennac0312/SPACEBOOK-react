@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 
 const Header = ( { parent, windowWidth } ) => {
 
-    let { showSearch, setShowSearch, mainProfile, clickedProfile } = useContext(AppContext)
+    let { showSearch, setShowSearch, mainProfile, clickedProfile, count, setCount } = useContext(AppContext)
 
-    const [ count, setCount ] = useState(0)
+    // const [ count, setCount ] = useState(0)
 
     const switchUnderline = (num) => {
             setCount(num)

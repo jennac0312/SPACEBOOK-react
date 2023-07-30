@@ -101,6 +101,8 @@ const AppContextProvider = (props) => {
     const [ showSearch, setShowSearch ] = useState(false) // search bar pop up
     const [ search, setSearch ] = useState(null) // for search bar names
     const [ time, setTime ] = useState(getRandomIntInclusive(1, 23))
+    const [ count, setCount ] = useState(0)
+
 
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
@@ -145,7 +147,7 @@ const AppContextProvider = (props) => {
     return(
         <AppContext.Provider value={{
             windowWidth, setPageMount, setCharacters, fetchRick,
-            characters, grabCharacters, grabRandomCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile,
+            characters, grabCharacters, grabRandomCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile, count, setCount,
 
             // doug
             galacticHome, setGalacticHome, getGalacticHome,

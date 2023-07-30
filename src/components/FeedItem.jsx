@@ -17,23 +17,6 @@ const FeedItem = ( {friend, index, parent} ) => {
     }
 
     const mobile = () => {
-
-      window.onscroll = () => {
-        let currentPosition = window.scrollY
-        let header = document.querySelector('.header')
-        let topHalf = document.querySelector('.topHalf')
-
-        console.log(window.scrollY)
-        if(currentPosition > 0){
-          // hide header and footer
-          // header && header.hide()
-        } else {
-          // show header and footer
-          topHalf.append(header)
-        }
-      }
-
-
       return(
         <div className={`friendPost post${index}`}>
       <div className="top">

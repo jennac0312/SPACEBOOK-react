@@ -246,11 +246,12 @@
     border: 3px solid red;
     width: 300px;
     min-height: 100px;
-    position: absolute;
+    position: fixed;
     top: 0;
     background-color: white;
     z-index: 11;
   }
+  
 
   .searchPopUp .top {
     display: flex;
@@ -314,6 +315,30 @@
 
   /* NAV --------------------------------------------------- */
   /* can make show at certain screen sizes if you want */
+  .sideNavbar{
+    background-color: white;
+    width: 300px;
+  }
+  .sideNavbar > * {
+    border: 1px solid red;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .sideNavbar img {
+    margin: 0 10px;
+    height: 20px;
+  }
+  
+  .sideNavbar .name{
+    font-weight: bold;
+  }
+
+  .sideNavbar .mainProfile{
+    height: 50px !important;
+    border-radius: 50%;
+  }
 
 
 
@@ -329,10 +354,7 @@
   height: 100vh;
 }
 .innerUniverse{
-  border: solid black; 
   border: 2px solid white; 
-
-
   height: 20px;
 
   margin-left: 2%;

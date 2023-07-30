@@ -463,6 +463,10 @@
         font-weight: bold;
         margin-left: 4px;
     }
+    .about .location:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
 
     /* FRIENDS */
     .friendsList{

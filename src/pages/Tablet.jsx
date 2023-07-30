@@ -12,7 +12,7 @@ import Contacts from '../components/Contacts'
 import Nav from '../components/Nav'
 
 const Tablet = () => {
-  let { grabCharacters, characters, mainProfile, showSearch, clickedProfile } = useContext(AppContext)
+  let { grabCharacters, characters, mainProfile, showSearch, clickedProfile, count } = useContext(AppContext)
 
   let friends = grabCharacters(10)
 
@@ -33,7 +33,7 @@ const Tablet = () => {
 
         <div className="mainContent">
           <div className="left">
-              {/* <Nav /> */}
+              { count === 4 && <Nav />}
               {/* rendering nav is optional */}
           </div>
           <div className="center">

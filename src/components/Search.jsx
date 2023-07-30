@@ -19,16 +19,16 @@ const Search = () => {
     //     })
     // }, [search])
 
-    const handleClick = (who) => {
+    const handleClick = (who, button) => {
         setShowSearch(false)
-        setClickedProfile(who)
         setSearch('')
+        if(button === 'character') setClickedProfile(who)
     }
 
   return (
     <div className='searchPopUp' onClick={() => setClicked(false)}>
         <div className="top">
-            <p className='back' onClick={() =>handleClick(false)}>⬅</p>
+            <p className='back' onClick={() =>handleClick(false, 'exit')}>⬅</p>
             <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' className='searchIcon' style={{ display: clicked && 'none'}} />
             <input type='text' placeholder='Search Spacebook'
             onClick={() => setClicked(true)}
@@ -43,7 +43,7 @@ const Search = () => {
                 // console.log(character.name)
                 if(character.name.toLowerCase().includes(search.toLowerCase())) return (
                     <Link to={`/profile/${character.name.replaceAll(' ', '')}`}>
-                        <div className="searchItem" onClick={() => handleClick(character)}>
+                        <div className="searchItem" onClick={() => handleClick(character,'character')}>
                             <img src={character.image} alt="" />
                             <div className="right">
                                 <h5>{character.name}</h5>
