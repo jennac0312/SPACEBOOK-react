@@ -125,6 +125,7 @@ const AppContextProvider = (props) => {
         console.log('GALACTIC RESPONSE',response); 
         setGalacticHome(response.data)
         }
+        
         useEffect(()=>{
             getGalacticHome()
         },[])

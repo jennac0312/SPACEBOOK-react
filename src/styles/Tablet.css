@@ -802,22 +802,99 @@
   
   /* PHOTOLIST */
   .photoList{
-    border: 2px solid purple;
-    background-color: white;
-    border-radius: 10px;
-    margin-top: 20px;
-    height: 400px;
-  }
-  
-  /* FRIENDS LIST */
-  .friendsList{
     border: 2px solid blue;
     background-color: white;
     border-radius: 10px;
     margin-top: 20px;
-    height: 400px;
+    /* height: 450px; */
   }
 
+  .photoList .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .photoList .all{
+    color: blue;
+  }
+  .photoList .pics {
+    border: 2px solid lime;
+    margin: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photoList .container {
+    border: 1px solid purple;
+    height: 100px;
+    width: 100px;
+  }
+
+  .photoList img{
+    height: 100px !important;
+    width: 100px;
+    border-radius: 10px;
+  }
+
+  
+  /* FRIENDS LIST */
+  .friendsList{
+    border: 2px solid purple;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* height: 400px; */
+  }
+  .friendsList .title{
+    border: 1px solid red;
+    padding: 10px;
+  }
+  .friendsList .title .top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  p.bold:hover{
+    text-decoration: underline;
+  }
+  .mutes{
+    opacity: .8;
+  }
+  .friendsList .all{
+    color: blue;
+  }
+  .friendsList .pics {
+    border: 2px solid lime;
+    margin: 8px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .friendsList .container {
+    border: 1px solid purple;
+    height: 100px;
+    width: 100px;
+    font-size: .6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .friendsList img{
+    height: 98px;
+    border-radius: 10px;
+  }
+
+  .friendsList .name {
+    font-weight: bold;
+  }
+  
+
+
+
+  
 }
 
 /* } */
