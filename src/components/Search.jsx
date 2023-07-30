@@ -28,7 +28,7 @@ const Search = () => {
   return (
     <div className='searchPopUp' onClick={() => setClicked(false)}>
         <div className="top">
-            <p className='back' onClick={() =>setShowSearch(false)}>X</p>
+            <p className='back' onClick={() =>handleClick(false)}>⬅</p>
             <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' className='searchIcon' style={{ display: clicked && 'none'}} />
             <input type='text' placeholder='Search Spacebook'
             onClick={() => setClicked(true)}

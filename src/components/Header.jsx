@@ -29,7 +29,7 @@ const Header = ( { parent, windowWidth } ) => {
                 <div className="">
                     <img src='https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Vector-PNG-Cutout.png' alt='plus' className='' />
                 </div>
-                <div className="" onClick={() => setShowSearch(true)}>
+                <div className="" onClick={() => setShowSearch(!showSearch)}>
                     <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>
                 </div>
                 <div className="">
