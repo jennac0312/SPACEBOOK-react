@@ -66,7 +66,7 @@ const Header = ( { parent, windowWidth } ) => {
             <div className='header'>
                 <div className="left">
                     <Link to="/home">
-                        <img src='https://cdn.pixabay.com/photo/2020/10/17/13/19/facebook-5662065_1280.png' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
+                        <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
                     </Link>
                     <div className="searchContainer" onClick={() => setShowSearch(true)}>
                         <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>
@@ -100,7 +100,7 @@ const Header = ( { parent, windowWidth } ) => {
             <div className='header'>
                 <div className="left">
                     <Link to="/home">
-                        <img src='https://cdn.pixabay.com/photo/2020/10/17/13/19/facebook-5662065_1280.png' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
+                        <img src='https://static.vecteezy.com/system/resources/previews/022/368/198/non_2x/fantasy-alien-planet-moon-and-satellite-magical-fantasy-world-gradient-color-space-objects-with-bubbles-vector.jpg' alt='logo' className='logo' onClick={() => setShowSearch(false)}/>
                     </Link>
                     <div className="searchContainer" onClick={() => setShowSearch(true)}>
                         <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>

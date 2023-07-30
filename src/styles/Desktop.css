@@ -13,7 +13,7 @@
   @media(min-width: 1200px){
 
 body{
-    background-color: rgba(7, 89, 197, 0.596);
+    /* background-color: rgba(7, 89, 197, 0.596); */
   }
 
 .mainContent{
@@ -403,7 +403,8 @@ body{
   height: 100vh;
 }
 .innerUniverse{
-  border: solid black; 
+  border: solid black;
+  border: 2px solid white; 
 
   height: 20px;
 

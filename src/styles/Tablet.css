@@ -9,7 +9,7 @@
     }
 
     body{
-      background-color: pink;
+      /* background-color: pink; */
     }
 
     .mainContent{
@@ -330,6 +330,8 @@
 }
 .innerUniverse{
   border: solid black; 
+  border: 2px solid white; 
+
 
   height: 20px;
 
