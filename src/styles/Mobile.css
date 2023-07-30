@@ -9,6 +9,10 @@
         overflow: scroll;
         background-color: rgb(189, 189, 189) !important;
     }
+    
+    .mobileProfileContainer{
+        background-color: rgb(189, 189, 189) !important;
+    }
 
     .topHalf{
         border: 1px solid yellow;
@@ -360,5 +364,43 @@
         border: 1px solid #585858;
         background-color: #e4e6eb;
         padding-left: 10px;
+    }
+
+    /* PROFILE */
+
+    .mobileProfileContainer{
+        border: 3px solid lightblue;
+        height: 844px;
+    }
+    .mobileProfileContainer .header{
+        width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .mobileProfileContainer .header > *{
+        margin: 0 5px;
+        border: 1px solid orange;
+        /* width: 20%; */
+    }
+
+    .mobileProfileContainer .header .name {
+        border: 1px solid red;
+    }
+    .mobileProfileContainer .header .right div{
+        background-color: white !important;
+    }
+    .mobileProfileContainer .header .right div:hover{
+        background-color: #e4e6eb !important;
+    }
+
+    .banner{
+        width: 100%;
+        height: 250px;
+    }
+
+    .banner img{
+        height: fill;
+        width: fill;
     }
 }

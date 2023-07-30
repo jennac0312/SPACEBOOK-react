@@ -19,9 +19,9 @@ const Profile = ( { parent, profile} ) => {
         return (
             
             <div className='mobileProfileContainer'>
-                <h1>{parent}</h1>
-                <h1>MOBILE PROFILE</h1>
-                <p>{profile.name} profile</p>
+                <Header parent="mobileProfile" />
+                { showSearch && <Search parent="mobile"/>}
+                <Banner />
                 <img src={profile.image}/>
             </div>
         )

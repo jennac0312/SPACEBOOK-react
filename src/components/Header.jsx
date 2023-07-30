@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Header = ( { parent, windowWidth } ) => {
 
-    let { showSearch, setShowSearch, mainProfile } = useContext(AppContext)
+    let { showSearch, setShowSearch, mainProfile, clickedProfile } = useContext(AppContext)
 
     const [ count, setCount ] = useState(0)
 
@@ -26,20 +26,40 @@ const Header = ( { parent, windowWidth } ) => {
 
             <div className="right">
 
-                <div className="">
-                    <img src='https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Vector-PNG-Cutout.png' alt='plus' className='' />
+                <div className="container">
+                    <img src='https://www.pngall.com/wp-content/uploads/10/Plus-Symbol-Vector-PNG-Cutout.png' alt='plus' className='plus' />
                 </div>
                 <div className="" onClick={() => setShowSearch(!showSearch)}>
                     <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>
                 </div>
-                <div className="">
-                    <img src='https://www.freeiconspng.com/uploads/black-facebook-messenger-logo-29.png' alt='message' className=''/>
+                <div className="container">
+                    <img src='https://www.freeiconspng.com/uploads/black-facebook-messenger-logo-29.png' alt='message' className='message'/>
                 </div>
 
             </div>
           </div>
         )
     } 
+
+    const mobileProfile = () => {
+        return(
+            <div className='header'>
+                <div className="left">
+                    <Link to="/home">
+                        <p className='back' onClick={() => setShowSearch(false)}>◀</p>
+                    </Link>
+                </div>
+                <h4 className='name'>{clickedProfile.name}</h4>
+
+                <div className="right">
+                    <div className="" onClick={() => setShowSearch(!showSearch)}>
+                        <img src='https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png' alt='search' className='search'/>
+                    </div>
+
+                </div>
+            </div>
+        )
+    }
     
     const tablet = () => {
         return(
@@ -113,10 +133,13 @@ const Header = ( { parent, windowWidth } ) => {
     if( parent ==="mobile" ){
         return mobile()
     }
-    if(parent ==="tablet"){
+    if( parent === "mobileProfile" ){
+        return mobileProfile()
+    }
+    if( parent ==="tablet" ){
         return tablet()
     }
-    if(parent ==="desktop"){
+    if( parent ==="desktop" ){
         return desktop()
     }
 }
