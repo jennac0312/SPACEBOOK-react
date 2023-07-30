@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 import Header from '../components/Header'
 import { AppContext } from '../context/app_context'
 import CreatePost from '../components/CreatePost'
+import Stories from '../components/Stories'
+import Feed from '../components/Feed'
 
 const Mobile = () => {
 
@@ -20,6 +22,9 @@ const Mobile = () => {
         <Header parent="mobile"/>
         <CreatePost parent="mobile"/>
       </div>
+      <Stories parent="mobile"/>
+      <Feed parent="mobile"/>
+
       <Routes>
         <Route /> 
         <Route /> 

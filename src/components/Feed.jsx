@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AppContext } from '../context/app_context'
 import FeedItem from './FeedItem'
 
-const Feed = () => {
+const Feed = ( {parent} ) => {
 
     let { grabCharacters } = useContext(AppContext)
 

@@ -1,5 +1,9 @@
 @media(max-width: 500px){
 
+    body{
+        background-color: rgb(189, 189, 189) !important;
+    }
+
     .topHalf{
         border: 1px solid yellow;
         padding: 0 10px;
@@ -8,7 +12,8 @@
     }
 
     .header{
-        border: 2px solid black;
+        border: 2px solid lime;
+        width: 462px;
         background-color: white;
         height: 50px;
         display: flex;
@@ -58,6 +63,7 @@
         margin-top: 55px;
         /* width: 500px; */
         display: flex;
+        align-items: center;
         padding: 10px 0;
     }
 
@@ -67,10 +73,217 @@
     }
 
     .createPost input {
-        background-color: #e4e6eb;
+        background-color: transparent;
         border: none;
+        padding-left: 8px;
+        /* outline: 1px solid #e4e6eb; */
+        outline: none;
+        font-size: .9em;
+        width: 100%;
     }
 
+    .createPost .icon {
+        height: 25px;
+    }
 
+    /* STORIES ----------- */
+    .storiesContainer{
+        margin-top: 10px;
+        background-color: white;
+        width: 100% !important;
+        height: fit-content !important;
+        padding-bottom: 10px;
+    }
+    .storiesContainer .options{
+        display: flex;
+        justify-content: center;
+        padding-top: 2px;
+    }
+    .storiesContainer .options *{
+        width: 47%;
+        text-align: center;
+        font-size: 1em;
+        font-weight: 600;
+        color: #585858;
+        border-bottom-width: 2px;
+        padding: 8px 0;
+    }
+    .storiesContainer .options *:hover{
+        background-color: rgba(128, 128, 128, 0.171);
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .underline:hover{
+        background-color: transparent !important;
+    }
+    .stories{
+        border: 2px solid green;
+        height: 230px;
+        display: flex;
+        overflow: scroll;
+        background: linear-gradient(rgb(228, 228, 228), white 10%);
+        padding-top: 10px;
+    }
+    .story{
+        margin-left: 10px;
+        /* border: 3px solid red; */
+        border-radius: 10px;
+        width: 130px !important;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+    
+    .story:hover{
+        cursor: pointer;
+    }
 
+    .story .avatar{
+        border-radius: 50%;
+        border: 3px solid #1876f2;
+        height: 40px;
+        margin: 8px;
+    }
+
+    .story .name{
+        margin-top: 140px;
+        color: white;
+        font-weight: bold;
+        font-size: .8em;
+        margin-left: 8px;
+    }
+
+    /* FEED */
+    .feedContainer{
+        border: 2px solid yellow;
+        margin-top: 10px;
+    }
+
+    .friendPost{
+        border: 2px solid purple;
+        margin-bottom: 10px;
+        background-color: white;
+        padding-bottom: 5px;
+    }
+
+    .friendPost .top{
+        border: 2px solid green;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        margin-bottom: 0;
+    }
+
+    .friendPost .left{
+        display: flex;
+        border: 2px solid red;
+        font-size: .8em;
+        align-items: center;
+    }
+
+    .friendPost .top .left img{
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #1876f2;
+        margin-right: 5px;
+    }
+
+    .friendPost .right{
+        display: flex;
+        /* border: 2px solid yellow; */
+        align-items: center;
+        margin-top: -15px;
+    }
+
+    .friendPost .right div{
+        border: none;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+    }
+    .friendPost .right div:hover {
+        background-color: #e4e6eb;
+        cursor: pointer;
+    }
+
+    .friendPost .right img {
+        height: 20px;
+    }
+
+    .textArea{
+        border: 2px solid blue;
+        margin: 0 10px;
+    }
+
+    .reactions{
+        margin: 0 10px;
+    }
+    .reactions .top{
+        border: 2px solid greenyellow;
+        margin: 0;
+    }
+
+    .friendPost .options{
+        border: 2px solid red;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px 0;
+    }
+    .friendPost .options > *{
+        /* border: 1px solid black; */
+        width: 32.3333%;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .friendPost .options > *:hover{
+        background-color: #e4e6eb;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .commentContainer{
+        border: 2px solid grey;
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .commentContainer img {
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 3px;
+    }
+
+    .comment{
+        background-color: #e4e6eb;
+        border-radius: 10px;
+        padding: 5px 10px;
+    }
+
+    .comment .name{
+        font-weight: bold;
+        font-size: .7em;
+    }
+
+    .addComment{
+        border: 2px solid peru;
+        margin-top: 5px;
+        display: flex;
+    }
+
+    .addComment img{
+        height: 35px;
+        border-radius: 50%;
+    }
+
+    .addComment input {
+        width: 100%;
+        border-radius: 15px;
+        border: 1px solid #585858;
+        background-color: #e4e6eb;
+        padding-left: 10px;
+    }
 }

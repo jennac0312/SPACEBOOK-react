@@ -19,9 +19,11 @@ const Header = ( { parent, windowWidth } ) => {
           <div className='header'>
             <div className="left">
                 <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="" className="menu" />
-                <img src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo-700x394.png" alt="" className="logo" />
+                <Link to="/home">
+                    <img src="https://logos-world.net/wp-content/uploads/2020/04/Facebook-Logo-700x394.png" alt="" className="logo" />
+                </Link>
             </div>
-            
+
             <div className="right">
 
                 <div className="">
