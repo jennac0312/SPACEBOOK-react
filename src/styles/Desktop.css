@@ -3,15 +3,17 @@
 /* GENERAL ------------------------------------ */
 html{
   /* background-color:#f0f2f5 !important; */
-  background-color: black;
+  /* background-color: black; */
 }
+
+
 *{
   margin: 0;
   padding: 0;
 }
 
 .main{
-  border: 1px solid red;
+  border: 10px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,15 +89,17 @@ button:hover{
 
 
 /* @media (min-width: 1201px){ */
-
+  @media(min-width: 1200px){
 
 body{
-    background-color: rgba(252, 5, 5, 0.178);
+    background-color: rgba(0, 255, 106, 0.596);
   }
 
 .mainContent{
   border: 4px solid yellow;
+  margin-top: 80px;
   /* width: 100%; */
+  display: flex;
   justify-content: space-between;
   /* overflow: scroll; */
 }
@@ -556,6 +560,7 @@ body{
 
   .sideNavbar img {
     margin: 0 10px;
+    height: 20px;
   }
   
   .sideNavbar .name{
@@ -761,7 +766,7 @@ body{
 }
 
 .textArea{
-  font-family: 'wingdings';
+  font-family: 'wingdings' !important;
 }
 
 
@@ -826,16 +831,21 @@ body{
 }
 
 .profileHead .stack .name {
-  font-size: 2.3em;
+  /* font-size: 2.3em; */
+  font-size: 1.8em;
 }
 .profileHead .pics{
+  border: 2px solid purple;
   margin-top: 10px;
 }
 .profileHead .pics img {
   height: 40px;
   border-radius: 50%;
   border: 2px solid white;
-  margin-right: -8px;
+  margin-right: -10px;
+}
+.profileHead .pics img:hover {
+  cursor: pointer;
 }
 .profileHead .right{
   border: 2px solid hotpink;
@@ -916,7 +926,7 @@ button.message{
 
 /* left side */
 .mainBody .left{
-  width: 40%;
+  width: 42%;
 }
 .mainBody .rightSide{
   border: 2px solid orange;
@@ -941,9 +951,21 @@ button.message{
   font-size: 1.5em;
   margin-bottom: 10px;
 }
+.intro .loca{
+  /* border: 1px solid red; */
+  width: 350px;
+}
+.intro .loca .text{
+  width: 60px;
+}
+.intro .loca span{
+  /* border: 1px solid green; */
+  display: block;
+  width: fit-content;
+}
 .intro .location{
   font-weight: bold;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 .intro .location:hover{
   text-decoration: underline;
@@ -979,4 +1001,5 @@ button.message{
 }
 
 
+}
 /* } */

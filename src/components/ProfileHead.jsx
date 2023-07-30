@@ -3,7 +3,7 @@ import { useContext, useState } from 'react'
 import { AppContext } from '../context/app_context'
 
 const ProfileHead = () => {
-    let { clickedProfile, galacticHome, getRandomIntInclusive, grabCharacters, grabRandomCharacters } = useContext(AppContext)
+    let { clickedProfile, setClickedProfile, galacticHome, getRandomIntInclusive, grabCharacters, grabRandomCharacters } = useContext(AppContext)
 
     let friends = grabRandomCharacters(9)
 

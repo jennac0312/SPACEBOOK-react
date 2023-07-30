@@ -1,10 +1,15 @@
 
 /* TABLET --------------------------------- */
 /* @media (max-width: 1200px) and (min-width: 400px){ */
+  @media(max-width: 1200px) and (min-width: 400px){
 
 
     html{
       /* background-color: yellow !important; */
+    }
+
+    body{
+      background-color: pink;
     }
 
     .mainContent{
@@ -504,5 +509,7 @@
     margin-top: 62px;
   }
 
+
+}
 
 /* } */
