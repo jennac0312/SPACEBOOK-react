@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react';
-// import './App.css';
+import './App.css';
 import Desktop from './pages/Desktop';
 import Mobile from './pages/Mobile';
 import Tablet from './pages/Tablet';

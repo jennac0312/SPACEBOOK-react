@@ -38,8 +38,8 @@ const Profile = ( { parent, profile} ) => {
                 <img src={profile.image}/> */}
                 <Banner />
                 <ProfileHead />
-                <div className="mainBody">
-                    <div className="left">
+                <div className="profileBody">
+                    <div className="leftSide">
                         <Intro />
                         <PhotoList />
                         <FriendsList />
@@ -65,8 +65,8 @@ const Profile = ( { parent, profile} ) => {
                 <img src={profile.image}/> */}
                 <Banner />
                 <ProfileHead />
-                <div className="mainBody">
-                    <div className="left">
+                <div className="profileBody">
+                    <div className="leftSide">
                         <Intro />
                         <PhotoList />
                         <FriendsList />

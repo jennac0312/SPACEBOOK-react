@@ -1,83 +1,4 @@
 /* DESKTOP------------------------------------------------------ */
-/* from app.css */
-/* GENERAL ------------------------------------ */
-html{
-  /* background-color:#f0f2f5 !important; */
-  /* background-color: black; */
-}
-
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.main{
-  border: 10px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-.mainLink{
-  color: purple;
-  text-decoration: none;
-  font-size: 80px;
-  font-weight: bold;
-  /* margin: auto; */
-  font-family: 'fantasy';
-}
-
-/* to undo default Link style */
-a{
-  text-decoration: none;
-  color: black;
-}
-
-/* header stays when scrolling */
-.header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10; 
-  /* to counteract contacts zindex */
-}
-
-.hide {
-  display: none;
-}
-
-/* for stories component */
-.underline {
-  border-bottom: 3px solid #1876f2;
-  border-radius: 0 !important;
-}
-
-::-webkit-scrollbar{
-  display: none;
-}
-
-button:hover{
-  cursor: pointer;
-}
-
-/* screen sizes */
-.mobile{
-  max-height: 844px;
-  max-width: 390px;
-}
-
-.tablet{
-  max-width: 1200px;
-}
-
-.desktop{
-  min-width: 1200px;
-}
-
-/* END GENERAL ---------------------------------------------- */
-
-
 
 .storiesContainer{
   /* background-color: red !important; */
@@ -92,7 +13,7 @@ button:hover{
   @media(min-width: 1200px){
 
 body{
-    background-color: rgba(0, 255, 106, 0.596);
+    background-color: rgba(7, 89, 197, 0.596);
   }
 
 .mainContent{
@@ -585,16 +506,77 @@ body{
 
 
   /* SEARCH PoP UP ------------------------ */
-  .searchPopUp{
-    border: 2px solid yellow !important;
-    z-index: 11;
-  }
-  .recent{
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+ /* SEARCH POP UP */
+ .searchPopUp{
+  border: 3px solid red;
+  width: 300px;
+  min-height: 100px;
+  position: absolute;
+  top: 0;
+  background-color: white;
+  z-index: 11;
+}
+
+.searchPopUp .top {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.searchPopUp input {
+  width: 85%;
+  border-radius: 40px;
+  border: none;
+  background-color: #f0f2f5;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchPopUp .searchIcon {
+  filter: invert(.5);
+  height: 20px;
+  position: absolute;
+  margin-left: -190px;
+}
+
+.searchPopUp .results{
+  border: 1px solid lime;
+  text-align: center;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.searchItem{
+  border: 1px solid peru;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 5px;
+}
+
+.searchItem:hover{
+  background-color: #bfc0c2;
+  cursor: pointer;
+}
+
+.searchItem img {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.searchItem .right{
+  border: 1px solid yellowgreen;
+  text-align: left;
+  margin-left: 10px;
+}
+.searchItem .right p{
+  opacity: .8;
+  font-size: .8em;
+}
+
 
 
 
@@ -914,7 +896,7 @@ button.message{
 }
 
 /*  MAIN BODY PROFILE */
-.mainBody{
+.profileBody{
   border: 3px solid green;
   margin: 20px;
   /* to push away from edges */
@@ -925,16 +907,16 @@ button.message{
 }
 
 /* left side */
-.mainBody .left{
+.profileBody .leftSide{
   width: 42%;
 }
-.mainBody .rightSide{
+.profileBody .rightSide{
   border: 2px solid orange;
   width: 55%;
   height: inherit;
   overflow-y: scroll;
 }
-.mainBody .right > *{
+.profileBody .right > *{
   /* width: 100% !important; */
 }
 
