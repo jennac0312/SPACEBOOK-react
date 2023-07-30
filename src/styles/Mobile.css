@@ -403,4 +403,71 @@
         height: fill;
         width: fill;
     }
+
+    .profileHead{
+        /* border: 3px solid red; */
+        background-color: white;
+        height: fit-content;
+    }
+
+    .profileHead .profilePic{
+        border: 3px solid white;
+        border-radius: 50%;
+        height: 150px;
+        margin-left: 10px;
+        margin-top: -115px;
+    }
+
+    .profileHead > * {
+        margin-left: 10px;
+    }
+    .profileHead .bottom{
+        /* border: 2px solid lime; */
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .profileHead button {
+        border-radius: 10px;
+        border: none;
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profileHead .friends, .profileHead .message {
+        width: 35%;
+    }
+    .profileHead .message{
+        background-color: #1876f2;
+        color: white;
+    }
+
+    .profileHead .dots{
+        height: 20px;
+    }
+
+    .profileHead .about > * {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .about p img {
+        margin-right: 6px;
+        height: 22px;
+    }
+    .about .location{
+        font-weight: bold;
+        margin-left: 4px;
+    }
+
+    /* FRIENDS */
+    .friendsList{
+        border: 2px solid blueviolet;
+        background-color: white;
+        height: 300px;
+    }
 }

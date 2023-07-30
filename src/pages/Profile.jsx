@@ -22,7 +22,20 @@ const Profile = ( { parent, profile} ) => {
                 <Header parent="mobileProfile" />
                 { showSearch && <Search parent="mobile"/>}
                 <Banner />
-                <img src={profile.image}/>
+                <ProfileHead parent="mobile"/>
+                <hr />
+                <FriendsList />
+                <CreatePost parent="mobile"/>
+                {/* <img src={profile.image}/> */}
+                {/* <div className="profileBody">
+                    <div className="leftSide">
+                        <Intro />
+                        <PhotoList />
+                    </div>
+                    <div className="rightSide">
+                        <Feed />
+                    </div>
+                </div> */}
             </div>
         )
     }
