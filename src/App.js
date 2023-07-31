@@ -35,7 +35,7 @@ function App() {
   }
 
   // mobile
-    if(windowWidth <= 500){
+    if(windowWidth <= 700){
       return (
         <>
           <Routes> 
@@ -49,7 +49,7 @@ function App() {
     }
     
     // tablet
-    if(windowWidth > 500 && windowWidth <= 1200 ){
+    if(windowWidth > 700 && windowWidth <= 1200 ){
       return (
         <>
           <Routes>

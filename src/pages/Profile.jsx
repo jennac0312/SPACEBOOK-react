@@ -13,7 +13,7 @@ import Feed from '../components/Feed'
 const Profile = ( { parent, profile} ) => {
 
     console.log('PROFILE PARENT:', parent)
-    let { showSearch } = useContext(AppContext)
+    let { showSearch, clickedProfile, mainProfile } = useContext(AppContext)
 
     const mobile = () => {
         return (
@@ -25,7 +25,25 @@ const Profile = ( { parent, profile} ) => {
                 <ProfileHead parent="mobile"/>
                 <hr />
                 <FriendsList parent="mobile"/>
-                <CreatePost parent="mobile"/>
+                <hr />
+                <div className="createPost">
+                    <div className="top">
+                        <img src={mainProfile?.image} alt="" srcset="" className='profilePic'/>
+                        <input type="text" placeholder={`Write something to ${clickedProfile.name}...`} className='bar'/>
+                    </div>
+                    <hr />
+                    <div className="bottom">
+                        <div className="post">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcset="" className='icon'/>
+                            <p>Write Post</p>
+                        </div>
+                        <div className="">
+                            <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcset="" className='icon'/>
+                            <p>Share Photo</p>
+                        </div>
+                    </div>
+                </div>
+                <Feed />
                 {/* <img src={profile.image}/> */}
                 {/* <div className="profileBody">
                     <div className="leftSide">

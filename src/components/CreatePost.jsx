@@ -12,7 +12,6 @@ const CreatePost = ( {parent} ) => {
         <input type="text" placeholder={`What's on your mind?`} className='bar'/>
         <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcset="" className='icon'/>
       </div>
-
     )
   }
 
