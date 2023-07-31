@@ -1,5 +1,5 @@
 <h1>SPACEBOOK</h1>
-<p> Social Network of the Multiverse </p>
+<i> Social Network of the Multiverse </i>
 <p>SpaceBook is the Facebook of the intergalactic universe. Spacebook features a home page where users can interact with friends. There is a news feed to catch up on friends recent acitivies. You can even enter their profiles through the search bar at the top of the page. In each profile, you will find unique photos</p>
 
 <h3>WIREFRAME</h3>
