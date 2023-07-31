@@ -22,7 +22,7 @@
           5. Banner - state <br>
           5. ProfileHead - props and state <br>
           5. FriendsList - props and state <br>
-          6. PhotoList - state <br>
+          5. PhotoList - state <br>
 
 <h3>MVP</h3>
 <p>Functioning with home page, profiles, and search features</p>
