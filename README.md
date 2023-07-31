@@ -9,7 +9,7 @@
 1. App.js <br>
   2. Root.jsx <br>
     3. Desktop.jsx / Tablet.jsx / Mobile.jsx - state <br>
-        4.Header - state <br>
+        4. Header - state <br>
           5. Search - state <br>
           5. Nav - state <br>
           5. Stories - props and state <br>
