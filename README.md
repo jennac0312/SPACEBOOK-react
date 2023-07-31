@@ -1,77 +1,46 @@
-# Getting Started with Create React App
+<h1>SPACEBOOK</h1>
+<p> Social Network of the Multiverse </p>
+<p>SpaceBook is the Facebook of the intergalactic universe. Spacebook features a home page where users can interact with friends. There is a news feed to catch up on friends recent acitivies. You can even enter their profiles through the search bar at the top of the page. In each profile, you will find unique photos</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3>WIREFRAME</h3>
+<p>Mobile, Tablet and Desktop based on Facebook Mobile, Tablet, and Desktop</p>
 
-## Available Scripts
+<h3>COMPONENT HIERACHY</h3>
+1. App.js
+  2. Root.jsx
+    3. Desktop.jsx / Tablet.jsx / Mobile.jsx - state
+        4.Header - state
+          5. Search - state
+          5. Nav - state
+          5. Stories - props and state
+          5. CreatePost - props and state
+          5. Contacts - state
+          5. Feed - props and state
+            6. FeedItem - props and state
+        4.Profile.jsx - props and state
+          5. Header - props and state
+          5. Banner - state
+          5. ProfileHead - props and state
+          5. FriendsList - props and state
+          6. PhotoList - state
 
-In the project directory, you can run:
+<h3>MVP</h3>
+<p>Functioning with home page, profiles, and search features</p>
 
-### `npm start`
+<h3>POST MVP</h3>
+<p>Root page floating spaceship</p>
+<p>Clickable Stories</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>HOOKS</h3>
+<p>useState</p>
+<p>useEffect</p>
+<p>useContext</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>DEPENDENCIES</h3>
+<p>BrowserRouter</p>
+<p>Axious</p>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-
-
-#README
+<h3>APIs</h3>
+<p>Rick and Morty API - https://rickandmortyapi.com/</p>
+<p>NASA API - https://api.nasa.gov/</p>
+<p>Quotes API - https://api.quotable.io/</p>
