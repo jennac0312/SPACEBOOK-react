@@ -9,20 +9,20 @@
 1. App.js <br>
   2. Root.jsx <br>
     3. Desktop.jsx / Tablet.jsx / Mobile.jsx - state <br>
-        4.Header - state
-          5. Search - state
-          5. Nav - state
-          5. Stories - props and state
-          5. CreatePost - props and state
-          5. Contacts - state
-          5. Feed - props and state
-            6. FeedItem - props and state
-        4.Profile.jsx - props and state
-          5. Header - props and state
-          5. Banner - state
-          5. ProfileHead - props and state
-          5. FriendsList - props and state
-          6. PhotoList - state
+        4.Header - state <br>
+          5. Search - state <br>
+          5. Nav - state <br>
+          5. Stories - props and state <br>
+          5. CreatePost - props and state <br>
+          5. Contacts - state <br>
+          5. Feed - props and state <br>
+            6. FeedItem - props and state <br>
+        4.Profile.jsx - props and state <br>
+          5. Header - props and state <br>
+          5. Banner - state <br>
+          5. ProfileHead - props and state <br>
+          5. FriendsList - props and state <br>
+          6. PhotoList - state <br>
 
 <h3>MVP</h3>
 <p>Functioning with home page, profiles, and search features</p>
