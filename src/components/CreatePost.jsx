@@ -8,9 +8,9 @@ const CreatePost = ( {parent} ) => {
   const mobile = () => {
     return (
       <div className="createPost">
-        <img src={mainProfile?.image} alt="" srcset="" className='profilePic'/>
+        <img src={mainProfile?.image} alt="" className='profilePic'/>
         <input type="text" placeholder={`What's on your mind?`} className='bar'/>
-        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" srcset="" className='icon'/>
+        <img src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/4lAYcqypgif.png" alt="" className='icon'/>
       </div>
     )
   }

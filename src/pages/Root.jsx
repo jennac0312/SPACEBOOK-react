@@ -18,9 +18,9 @@ const Root = () => {
                 <div className="infoBox">
                     <p></p>
                     <p className = "spaceBook">  SPACEBOOK </p>
-                    <marquee class="marq" behavior="scroll" direction="right">
+                    {/* <marquee class="marq" behavior="scroll" direction="right">
                         <img src="src/ricksspaceship-removebg-preview_360.png" width="125" height="50" alt="smile" vspace="0%" />
-                    </marquee>
+                    </marquee> */}
                    </div>
             </div>
          </Link>

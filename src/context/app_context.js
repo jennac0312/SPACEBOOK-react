@@ -136,7 +136,7 @@ const AppContextProvider = (props) => {
     const [quotes, setQuotes] = useState([]);
 
     const getRandomQuotes = async () => {
-        console.log('getting quotes')
+        // console.log('getting quotes')
         await axios
             .get('https://api.quotable.io/quotes/random?limit=15')
             .then((response) => {
@@ -151,7 +151,7 @@ const AppContextProvider = (props) => {
  
     useEffect(() => {
     //  trigger the getRandomQuotes function
-    //  getRandomQuotes();
+     getRandomQuotes();
     }, []);
 
 
@@ -166,19 +166,9 @@ const AppContextProvider = (props) => {
 
     useEffect(() => {
         // console.log('QUOTES 2')
-        getQuote()
+        // getQuote()
     }, [])
     // --------------------------------------------
-
-
-
-
-
-
-
-
-
-
 
     return(
         <AppContext.Provider value={{
@@ -188,7 +178,10 @@ const AppContextProvider = (props) => {
             
             galacticHome, setGalacticHome, getGalacticHome,
 
-            quotes, kQuote, getQuote, setKQuote
+            quotes, setQuotes, getRandomQuotes,
+
+            //temp api
+            kQuote, getQuote, setKQuote
 
         }}>
             {props.children}

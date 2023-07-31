@@ -11,7 +11,7 @@ const Feed = ( {parent} ) => {
   return (
     <div className='feedContainer'>
         { friends.map((friend, index) => {
-            return <FeedItem friend={friend} index={index} parent={parent} kQuote={kQuote}/>
+            return <FeedItem friend={friend} index={index} parent={parent} kQuote={kQuote} key={index}/>
         }) }
     </div>
   )

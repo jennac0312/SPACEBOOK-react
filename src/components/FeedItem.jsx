@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom'
 
 const FeedItem = ( {friend, index, parent} ) => {
 
-    let { mainProfile, getRandomIntInclusive, time, setClickedProfile, getQuote, kQuote } = useContext(AppContext)
+    let { mainProfile, getRandomIntInclusive, time, setClickedProfile, qoutes, getQuote, kQuote } = useContext(AppContext)
 
+    // temp api
     // let kQuote = getQuote()
     // console.log(kQuote)
 
@@ -24,11 +25,11 @@ const FeedItem = ( {friend, index, parent} ) => {
       for(let i = 0; i < howMany; i++){
         quote+= words
       }
-      console.log(quote)
+      // console.log(quote)
       return quote
     }
 
-    let quote = repeat(kQuote, getRandomIntInclusive(1,1))
+    // let quote = repeat(kQuote, getRandomIntInclusive(1,1)) //rerenders every screen resize
 
     const mobile = () => {
       return(
@@ -58,7 +59,7 @@ const FeedItem = ( {friend, index, parent} ) => {
       </div>
 
       <div className="textArea">
-        <p>{quote}</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus dicta vitae impedit repellendus odio iure temporibus quo placeat hic, nemo aspernatur maxime dolorem molestiae sequi.</p>
       </div>
 
       <div className="reactions">
@@ -128,7 +129,8 @@ const FeedItem = ( {friend, index, parent} ) => {
           </div>
     
           <div className="textArea">
-            <p>{quote}</p>
+            {/* ann api */}
+            <p>{qoutes ? qoutes?.content : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione vero officia nostrum praesentium, sequi est ab laboriosam quas delectus itaque. Sed perferendis omnis doloribus repellendus.' }</p>
           </div>
     
           <div className="reactions">
