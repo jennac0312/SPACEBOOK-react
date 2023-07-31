@@ -161,7 +161,8 @@ const AppContextProvider = (props) => {
     }
 
     useEffect(() => {
-        getQuote()
+        console.log('QUOTES 2')
+        // getQuote()
     }, [])
     // --------------------------------------------
 

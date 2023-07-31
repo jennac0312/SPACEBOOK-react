@@ -8,7 +8,7 @@ const FriendsList = ( {parent} ) => {
   let friends = grabCharacters(9)
 
   const mobile = () => {
-    let friends = grabCharacters(8)
+    let friends = grabCharacters(12)
     return(
       <div className="friendsList">
           <p className='bold'>Friends</p>

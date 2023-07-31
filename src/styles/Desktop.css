@@ -17,7 +17,7 @@ body{
   }
 
 .mainContent{
-  border: 4px solid yellow;
+  /* border: 4px solid yellow; */
   margin-top: 80px;
   /* width: 100%; */
   display: flex;
@@ -26,7 +26,7 @@ body{
 }
 
 .mainContent > * {
-  border: 5px solid lime;
+  /* border: 5px solid lime; */
   width: min-content !important;
   height: 90vh;
   overflow-y: scroll;
@@ -73,12 +73,13 @@ body{
 }
 
 .story{
-  border: 1px solid lime;
+  /* border: 1px solid lime; */
   border-radius: 10px;
   flex-shrink: 0;
   height: 190px;
   width: 120px;
   margin: 0 7px;
+  border: none !important;
 }
 
 .story .avatar {
@@ -140,7 +141,7 @@ body{
 }
 
 .header .middle *{
-  border: 1px solid lime;
+  border: 1px solid lime !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,7 +163,7 @@ body{
 }
 
 .header .iconContainer{
-  /* border: 1px solid lime; */
+  /* border: 1px solid lime !important; */
   background-color: #f0f2f5;
   border-radius: 50%;
   height: 38px;
@@ -521,9 +522,10 @@ body{
   width: 300px;
   min-height: 100px;
   position: absolute;
-  top: 0;
+  top: -79px;
   background-color: white;
   z-index: 11;
+  border-radius: 10px;
 }
 
 .searchPopUp .top {
@@ -612,18 +614,18 @@ body{
 }
 
 .friendPost .top{
-  border: 1px solid rgb(75, 77, 233);
+  /* border: 1px solid rgb(75, 77, 233); */
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
 }
 .friendPost .left{
-  border: 1px solid hotpink;
+  /* border: 1px solid hotpink; */
   display: flex;
   align-items: center;
 }
 .friendPost .left div{
-  border: 2px solid purple !important;
+  /* border: 2px solid purple !important; */
   margin-left: 10px;
   width: 100% !important;
 }
@@ -634,7 +636,7 @@ body{
 }
 
 .friendPost .right{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
   opacity: .8;
@@ -766,8 +768,15 @@ body{
 .desktopProfileContainer{
   /* background-color: #f0f2f5; */
   margin-top: 62px;
+  /* border: 2px solid red; */
+  height: 100vh;
+  overflow-y: scroll;
 }
 
+.desktopProfileContainer .searchPopUp{
+  margin-top: 18px !important;
+  margin-left: 5px;
+}
 .banner{
   /* border: 3px solid red; */
   height: 400px;
@@ -798,7 +807,7 @@ body{
 }
 
 .profileHead .left{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   display: flex;
   width: 80%;
   height: 160px;
@@ -813,7 +822,7 @@ body{
 }
 
 .profileHead .stack{
-  border: 2px solid lime;
+  /* border: 2px solid lime; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -826,7 +835,7 @@ body{
   font-size: 1.8em;
 }
 .profileHead .pics{
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   margin-top: 10px;
 }
 .profileHead .pics img {
@@ -839,12 +848,13 @@ body{
   cursor: pointer;
 }
 .profileHead .right{
-  border: 2px solid hotpink;
+  /* border: 2px solid hotpink; */
   width: 350px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
+
 }
 .profileHead .right button{
   border-radius: 5px;
@@ -906,7 +916,7 @@ button.message{
 
 /*  MAIN BODY PROFILE */
 .profileBody{
-  border: 3px solid green;
+  /* border: 3px solid green; */
   margin: 20px;
   /* to push away from edges */
   display: flex;
@@ -920,7 +930,7 @@ button.message{
   width: 42%;
 }
 .profileBody .rightSide{
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   width: 55%;
   height: inherit;
   overflow-y: scroll;
@@ -932,7 +942,7 @@ button.message{
 /* INTRO ------------- */
 .intro{
   background-color: white;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   border-radius: 10px;
   margin-top: 20px;
   /* width: 40%; */
@@ -975,7 +985,7 @@ button.message{
 
   /* PHOTOLIST */
   .photoList{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     background-color: white;
     border-radius: 10px;
     margin-top: 20px;
@@ -991,14 +1001,14 @@ button.message{
     color: blue;
   }
   .photoList .pics {
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
     margin: 8px;
     display: flex;
     flex-wrap: wrap;
   }
 
   .photoList .container {
-    border: 1px solid purple;
+    border: 2px solid black;
     height: 100px;
     width: 100px;
     background-size: cover;
@@ -1013,14 +1023,14 @@ button.message{
   }
   /* FRIENDS LIST */
   .friendsList{
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     background-color: white;
     border-radius: 10px;
     margin-top: 20px;
     /* height: 400px; */
   }
   .friendsList .title{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 10px;
   }
   .friendsList .title .top {
@@ -1040,17 +1050,21 @@ button.message{
     color: blue;
   }
   .friendsList .pics {
-    border: 2px solid lime;
+    /* border: 2px solid lime; */
     margin: 8px;
     display: flex;
     flex-wrap: wrap;
   }
 
   .friendsList .container {
-    border: 1px solid purple;
-    height: 100px;
-    width: 100px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 102px !important;
+    width: 100px !important;
     font-size: .6em;
+    margin: 1px 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

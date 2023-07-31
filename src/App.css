@@ -46,6 +46,10 @@ a{
   /* to counteract contacts zindex */
 }
 
+.header p{
+  font-size: 1.5em;
+}
+
 .hide {
   display: none;
 }
@@ -53,7 +57,7 @@ a{
 /* for stories component */
 .underline {
   border-bottom: 3px solid #1876f2;
-  border-radius: 0 !important;
+  /* border-radius: 0 !important; */
 }
 
 ::-webkit-scrollbar{
