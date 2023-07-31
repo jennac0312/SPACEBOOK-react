@@ -6,9 +6,9 @@
 <p>Mobile, Tablet and Desktop based on Facebook Mobile, Tablet, and Desktop</p>
 
 <h3>COMPONENT HIERACHY</h3>
-1. App.js
-  2. Root.jsx
-    3. Desktop.jsx / Tablet.jsx / Mobile.jsx - state
+1. App.js <br>
+  2. Root.jsx <br>
+    3. Desktop.jsx / Tablet.jsx / Mobile.jsx - state <br>
         4.Header - state
           5. Search - state
           5. Nav - state
