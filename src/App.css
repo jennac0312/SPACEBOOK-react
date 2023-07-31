@@ -37,6 +37,10 @@ a{
   color: black;
 }
 
+.textArea, .comment .text{
+  font-family: 'wingdings';
+}
+
 /* header stays when scrolling */
 .header {
   position: fixed;

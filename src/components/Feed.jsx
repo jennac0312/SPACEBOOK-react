@@ -4,14 +4,14 @@ import FeedItem from './FeedItem'
 
 const Feed = ( {parent} ) => {
 
-    let { grabCharacters } = useContext(AppContext)
+    let { grabCharacters, kQuote } = useContext(AppContext)
 
     const friends = grabCharacters(20)
 
   return (
     <div className='feedContainer'>
         { friends.map((friend, index) => {
-            return <FeedItem friend={friend} index={index} parent={parent}/>
+            return <FeedItem friend={friend} index={index} parent={parent} kQuote={kQuote}/>
         }) }
     </div>
   )

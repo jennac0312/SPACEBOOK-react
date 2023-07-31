@@ -38,7 +38,7 @@ const Nav = () => {
     
         <div className='video'> 
           <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/space-video-1152944.png?f=webp" alt="" className='icon'/>
-         <span> video </span> 
+         <span> Video </span> 
         </div>
     
         <div className='memories'> 

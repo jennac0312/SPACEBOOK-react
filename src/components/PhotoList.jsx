@@ -10,7 +10,7 @@ const PhotoList = () => {
     for(let i = 0; i < howMany; i ++){
       arr.push( galacticHome[i] )
     }
-    console.log(arr)
+    // console.log(arr)
   }
 
   grabSome(9)

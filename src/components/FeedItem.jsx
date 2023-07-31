@@ -1,10 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../context/app_context'
 import { Link } from 'react-router-dom'
 
 const FeedItem = ( {friend, index, parent} ) => {
 
-    let { mainProfile, getRandomIntInclusive, time, setClickedProfile } = useContext(AppContext)
+    let { mainProfile, getRandomIntInclusive, time, setClickedProfile, getQuote, kQuote } = useContext(AppContext)
+
+    // let kQuote = getQuote()
+    // console.log(kQuote)
 
     const [ likes, setLikes ] = useState(0)
     
@@ -15,6 +18,17 @@ const FeedItem = ( {friend, index, parent} ) => {
     const focusOn = (who) => {
         who.focus() // sets focus to comment clicked
     }
+
+    const repeat = (words, howMany) => {
+      let quote = ""
+      for(let i = 0; i < howMany; i++){
+        quote+= words
+      }
+      console.log(quote)
+      return quote
+    }
+
+    let quote = repeat(kQuote, getRandomIntInclusive(1,1))
 
     const mobile = () => {
       return(
@@ -44,7 +58,7 @@ const FeedItem = ( {friend, index, parent} ) => {
       </div>
 
       <div className="textArea">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed cumque maiores ducimus similique, dolor officia harum molestiae amet iste consequuntur corporis est error culpa, eligendi ipsam id. Nisi, deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at, magnam explicabo adipisci iste odit dolore incidunt. Omnis exercitationem architecto animi soluta consectetur excepturi temporibus at facere, velit tenetur optio.</p>
+        <p>{quote}</p>
       </div>
 
       <div className="reactions">
@@ -114,7 +128,7 @@ const FeedItem = ( {friend, index, parent} ) => {
           </div>
     
           <div className="textArea">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem sed cumque maiores ducimus similique, dolor officia harum molestiae amet iste consequuntur corporis est error culpa, eligendi ipsam id. Nisi, deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi at, magnam explicabo adipisci iste odit dolore incidunt. Omnis exercitationem architecto animi soluta consectetur excepturi temporibus at facere, velit tenetur optio.</p>
+            <p>{quote}</p>
           </div>
     
           <div className="reactions">

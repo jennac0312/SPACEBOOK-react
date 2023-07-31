@@ -16,19 +16,7 @@ function App() {
   // setPageMount(true)
   // console.log(window.innerWidth)
   // console.log('CLICKED PROFILE', clickedProfile)
-  console.log('width',windowWidth)
-
-  // issue with not having characters ready on render... attempt fix failed
-//   useEffect(() => {
-//     let array = grabCharacters(20)
-//     setCharacters(array)
-    
-//     return () => {
-//         fetchRick('https://rickandmortyapi.com/api/character?page=1')
-//         console.log('unmount')
-//         console.log(array)
-//     }
-// }, [])
+  // console.log('width',windowWidth)
 
   const hide = (toeNail) => {
     toeNail.classList.add('hide')

@@ -12,7 +12,7 @@ import Feed from '../components/Feed'
 
 const Profile = ( { parent, profile} ) => {
 
-    console.log('PROFILE PARENT:', parent)
+    // console.log('PROFILE PARENT:', parent)
     let { showSearch, clickedProfile, mainProfile } = useContext(AppContext)
 
     const mobile = () => {
@@ -23,7 +23,7 @@ const Profile = ( { parent, profile} ) => {
                 { showSearch && <Search parent="mobile"/>}
                 <Banner />
                 <ProfileHead parent="mobile"/>
-                <hr />
+                {/* <hr /> */}
                 <FriendsList parent="mobile"/>
                 <hr />
                 <div className="createPost">

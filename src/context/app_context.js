@@ -64,8 +64,8 @@ const AppContextProvider = (props) => {
         
         return () => {
             fetchRick('https://rickandmortyapi.com/api/character?page=1')
-            console.log('unmount')
-            console.log(array)
+            // console.log('unmount')
+            // console.log(array)
         }
     }, [pageMount])
     
@@ -122,7 +122,7 @@ const AppContextProvider = (props) => {
         const getGalacticHome = async () => {
         const response = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=VMV9vIgFB7Mfpe28RjcFSDyawICxwznNYKIYYQCS&count=20
         `)
-        console.log('GALACTIC RESPONSE',response); 
+        // console.log('GALACTIC RESPONSE',response); 
         setGalacticHome(response.data)
         }
         
@@ -155,14 +155,18 @@ const AppContextProvider = (props) => {
     }, []);
 
 
-    const getQuote = async () => {
-        let response = await axios.get(`https://zenquotes.io/api/random`)
-        console.log(response)
+    // temp api Ann
+    const [ kQuote, setKQuote ] = useState("")
+    const getQuote =  async () => {
+        let response =  await axios.get(`https://api.themotivate365.com/stoic-quote`)
+        setKQuote(response.data.quote)
+        console.log(response.data.quote)
+        return response.data.quote
     }
 
     useEffect(() => {
-        console.log('QUOTES 2')
-        // getQuote()
+        // console.log('QUOTES 2')
+        getQuote()
     }, [])
     // --------------------------------------------
 
@@ -181,10 +185,10 @@ const AppContextProvider = (props) => {
             windowWidth, setPageMount, setCharacters, fetchRick,
             characters, grabCharacters, grabRandomCharacters, mainProfile, showSearch, setShowSearch, search, setSearch, getRandomIntInclusive, time, clickedProfile, setClickedProfile, count, setCount,
 
-            // doug
+            
             galacticHome, setGalacticHome, getGalacticHome,
 
-            // ann
+            quotes, kQuote, getQuote, setKQuote
 
         }}>
             {props.children}

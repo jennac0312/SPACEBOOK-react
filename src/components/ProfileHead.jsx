@@ -34,6 +34,7 @@ const ProfileHead = ( { parent } ) => {
                     <p><img src='https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-large/1f194.png'/> {clickedProfile.gender}</p>
                     <p ><img src='https://a.slack-edge.com/production-standard-emoji-assets/14.0/google-large/1f550.png'/> Joined {clickedProfile.created}</p>
                 </div>
+                <hr />
             </div>
           )
     }
