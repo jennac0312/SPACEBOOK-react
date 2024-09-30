@@ -135,19 +135,19 @@ const AppContextProvider = (props) => {
     // ANN API------------------------------------
     const [quotes, setQuotes] = useState([]);
 
-    const getRandomQuotes = async () => {
-        // console.log('getting quotes')
-        await axios
-            .get('https://api.quotable.io/quotes/random?limit=15')
-            .then((response) => {
-            console.log(response.data);
-            setQuotes(response.data);
-        // console.log(getRandomQuotes)
-        })
-        .catch((err) => {
-        console.log('QUOTABLE FAILED' + err);
-        });
-    };  
+    // const getRandomQuotes = async () => {
+    //     // console.log('getting quotes')
+    //     await axios
+    //         .get('https://api.quotable.io/quotes/random?limit=15')
+    //         .then((response) => {
+    //         console.log(response.data);
+    //         setQuotes(response.data);
+    //     // console.log(getRandomQuotes)
+    //     })
+    //     .catch((err) => {
+    //     console.log('QUOTABLE FAILED' + err);
+    //     });
+    // };  
  
     useEffect(() => {
     //  trigger the getRandomQuotes function
