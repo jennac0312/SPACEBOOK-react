@@ -31,7 +31,7 @@ const Stories = ( {parent} ) => {
                   <img src={friend.image} alt='profile pic' className='avatar'/>
                   <p className='name'>{friend.name}</p>
                 </div>
-                ) : null
+                ) : <p>Friend failed to load</p>
               )
             }) }
           </div>

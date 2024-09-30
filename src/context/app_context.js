@@ -63,7 +63,7 @@ const AppContextProvider = (props) => {
         setCharacters(array)
         
         return () => {
-            fetchRick('https://thingproxy.freeboard.io/fetch/https://rickandmortyapi.com/api/character?page=1')
+            fetchRick('https://rickandmortyapi.com/api/character?page=1')
             // console.log('unmount')
             // console.log(array)
         }
@@ -138,7 +138,7 @@ const AppContextProvider = (props) => {
     const getRandomQuotes = async () => {
         // console.log('getting quotes')
         await axios
-            .get('https://thingproxy.freeboard.io/fetch/https://api.quotable.io/quotes/random?limit=15')
+            .get('https://api.quotable.io/quotes/random?limit=15')
             .then((response) => {
             console.log(response.data);
             setQuotes(response.data);
