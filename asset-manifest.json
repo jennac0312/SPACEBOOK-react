@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/spacebook-react/static/css/main.b1b30342.css",
-    "main.js": "/spacebook-react/static/js/main.4416fb7b.js",
+    "main.js": "/spacebook-react/static/js/main.a1d0be0d.js",
     "index.html": "/spacebook-react/index.html",
     "main.b1b30342.css.map": "/spacebook-react/static/css/main.b1b30342.css.map",
-    "main.4416fb7b.js.map": "/spacebook-react/static/js/main.4416fb7b.js.map"
+    "main.a1d0be0d.js.map": "/spacebook-react/static/js/main.a1d0be0d.js.map"
   },
   "entrypoints": [
     "static/css/main.b1b30342.css",
-    "static/js/main.4416fb7b.js"
+    "static/js/main.a1d0be0d.js"
   ]
 }
