@@ -138,7 +138,7 @@ const AppContextProvider = (props) => {
     const getRandomQuotes = async () => {
         // console.log('getting quotes')
         await axios
-            .get('https://api.quotable.io/quotes/random?limit=15')
+            .get('https://cors-anywhere.herokuapp.com/https://api.quotable.io/quotes/random?limit=15')
             .then((response) => {
             console.log(response.data);
             setQuotes(response.data);
