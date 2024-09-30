@@ -151,7 +151,7 @@ const AppContextProvider = (props) => {
  
     useEffect(() => {
     //  trigger the getRandomQuotes function
-     getRandomQuotes();
+    //  getRandomQuotes();
     }, []);
 
 
