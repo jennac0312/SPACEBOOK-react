@@ -27,7 +27,7 @@ const Stories = ( {parent} ) => {
             { friends.map((friend, index) => {
               return (
                 <div className="story" style={{backgroundImage: `url(${galacticHome[index]?.url})`}} key={index}>
-                  <img src={friend.image} alt='profile pic' className='avatar'/>
+                  <img src={friend && friend.image} alt='profile pic' className='avatar'/>
                   <p className='name'>{friend.name}</p>
                 </div>
               )
