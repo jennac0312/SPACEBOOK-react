@@ -178,7 +178,8 @@ const AppContextProvider = (props) => {
             
             galacticHome, setGalacticHome, getGalacticHome,
 
-            quotes, setQuotes, getRandomQuotes,
+            quotes, setQuotes,  
+        // getRandomQuotes,
 
             //temp api
             kQuote, getQuote, setKQuote
