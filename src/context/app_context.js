@@ -63,7 +63,7 @@ const AppContextProvider = (props) => {
         setCharacters(array)
         
         return () => {
-            fetchRick('https://rickandmortyapi.com/api/character?page=1')
+            fetchRick('https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character?page=1')
             // console.log('unmount')
             // console.log(array)
         }
