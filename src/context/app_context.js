@@ -145,9 +145,9 @@ const AppContextProvider = (props) => {
         // console.log(getRandomQuotes)
         })
         .catch((err) => {
-        console.log(err);
+        console.log('QUOTABLE FAILED' + err);
         });
-    };
+    };  
  
     useEffect(() => {
     //  trigger the getRandomQuotes function
